@@ -17,6 +17,8 @@ jobs:
           node-version: 16
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+      - name: Lint project
+        run: npm run lint
       - name: Run tests
         run: npm test
   short:

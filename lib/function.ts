@@ -4,25 +4,39 @@ import valueParser, {
   type Node,
 } from "postcss-value-parser"
 
-import { isBoolean, round, toPX, toREMWithFixedPrecision } from "./utils"
+import { ParsedOptions } from "./options"
+import {
+  checkWhetherUnitIsAllowed,
+  isBoolean,
+  round,
+  toPX,
+  toREMWithFixedPrecision,
+} from "./utils"
 
 export function hasFluidFunction(value: string) {
   return value.includes("fluid(")
 }
 
-export function applyFluidFunction(node: FunctionNode) {
+export function applyFluidFunction(node: FunctionNode, options: ParsedOptions) {
   const func = node
-  const parsedParameters = getParsedParameters(func)
+  const parsedParameters = getParsedParameters(func, options)
   const parameterValuesAndUnit = getParameterValuesAndUnit(parsedParameters)
   const clamp = getClamp(...parameterValuesAndUnit)
   return valueParser(clamp).nodes[0]
 }
 
-function getParsedParameters(functionNode: FunctionNode): Dimension[] {
-  const params = functionNode.nodes
+function getParsedParameters(
+  functionNode: FunctionNode,
+  options: ParsedOptions
+): Dimension[] {
+  let params = functionNode.nodes
     .filter((node) => node.type === "word")
     .map((node) => node.value)
     .map((value) => valueParser.unit(value))
+
+  if (params.length === 2 && options) {
+    params = [...params, options.min, options.max]
+  }
 
   if (params.length !== 4) {
     throw new Error("Function expects 4 parameters")
@@ -48,17 +62,8 @@ function getParameterValuesAndUnit([
     throw new Error("Viewport units does not match")
   }
 
-  const allowedUnits = ["px", "rem"]
-  if (!allowedUnits.includes(minValueDimension.unit)) {
-    throw new Error(
-      `Unsupported unit: "${minValueDimension.unit}". Please use "px" or "rem" instead`
-    )
-  }
-  if (!allowedUnits.includes(minViewportDimension.unit)) {
-    throw new Error(
-      `Unsupported unit: "${minViewportDimension.unit}". Please use "px" or "rem" instead`
-    )
-  }
+  checkWhetherUnitIsAllowed(minValueDimension)
+  checkWhetherUnitIsAllowed(minViewportDimension)
 
   const outputUnit = minValueDimension.unit
   const currentViewportUnit = minViewportDimension.unit

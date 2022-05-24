@@ -1,9 +1,15 @@
+import type { Dimension } from "postcss-value-parser"
+
 export function isBoolean(value: unknown): value is boolean {
   return (
     value === true ||
     value === false ||
     toString.call(value) === "[object Boolean]"
   )
+}
+
+export function isNumber(value: unknown): value is number {
+  return typeof value === "number" || toString.call(value) === "[object Number]"
 }
 
 export function round(number: number, precision: number) {
@@ -20,4 +26,14 @@ export function toREMWithFixedPrecision(number: number, precision = 3) {
 
 export function toPX(number: number) {
   return number * 16
+}
+
+const ALLOWED_UNITS = ["px", "rem"]
+
+export function checkWhetherUnitIsAllowed({ unit }: Dimension): void {
+  if (!ALLOWED_UNITS.includes(unit)) {
+    throw new Error(
+      `Unsupported unit: "${unit}". Please use "px" or "rem" instead`
+    )
+  }
 }

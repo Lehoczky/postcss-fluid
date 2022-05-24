@@ -6,8 +6,11 @@ import {
   hasFluidFunction,
   isFluidFunction,
 } from "./function"
+import { Options, parseOptions } from "./options"
 
-const pluginCreator = (): Plugin => {
+const pluginCreator = (opts: Options = {}): Plugin => {
+  const options = parseOptions(opts)
+
   return {
     postcssPlugin: "postcss-fluid",
     Declaration(decl) {
@@ -18,7 +21,7 @@ const pluginCreator = (): Plugin => {
 
       const parsedValue = valueParser(value)
       const newNodes = parsedValue.nodes.map((node) => {
-        return isFluidFunction(node) ? applyFluidFunction(node) : node
+        return isFluidFunction(node) ? applyFluidFunction(node, options) : node
       })
 
       decl.value = valueParser.stringify(newNodes)

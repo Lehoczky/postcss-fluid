@@ -1,17 +1,50 @@
 {
-  "name": "postcss-fluid",
-  "version": "0.0.0",
+  "name": "@lehoczky/postcss-fluid",
+  "version": "0.0.1",
+  "private": false,
   "description": "PostCSS plugin for using fluid values in css",
+  "scripts": {
+    "build": "tsc",
+    "lint": "npm run eslint:check && npm run format:check",
+    "eslint:check": "eslint . --ext .ts --max-warnings=0 --ignore-path=.gitignore",
+    "format:check": "prettier \"./**\" --check --ignore-path=.gitignore --ignore-unknown",
+    "test": "vitest run --coverage"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.3.0"
+  },
+  "dependencies": {
+    "postcss-value-parser": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.35",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "c8": "^7.11.3",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.4",
+    "vitest": "^0.12.9"
+  },
   "keywords": [
     "postcss",
     "css",
     "postcss-plugin",
     "postcss-fluid"
   ],
-  "scripts": {
-    "lint": "eslint .",
-    "test": "jest --coverage"
-  },
   "author": {
     "name": "Zoltan Lehoczky",
     "email": "ifjlehoczkyzoltan@gmail.com",
@@ -21,21 +54,5 @@
   "repository": {
     "url": "https://github.com/Lehoczky/postcss-fluid.git",
     "type": "git"
-  },
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "peerDependencies": {
-    "postcss": "^8.3.0"
-  },
-  "devDependencies": {
-    "clean-publish": "^3.4.5",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jest": "^25.7.0",
-    "jest": "^27.5.1",
-    "postcss": "^8.4.14",
-    "postcss-value-parser": "^4.2.0",
-    "prettier": "^2.6.2"
   }
 }

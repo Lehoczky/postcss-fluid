@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "lib": ["es2017", "DOM"],
+    "module": "commonjs",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "pretty": true,
+    "removeComments": false,
+    "declaration": true,
+    "target": "es2017",
+    "types": ["node"]
+  },
+  "include": ["lib/**/*.ts"],
+  "exclude": ["dist"]
+}

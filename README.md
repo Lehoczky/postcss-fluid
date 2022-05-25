@@ -4,19 +4,30 @@
 ![test status](https://github.com/lehoczky/postcss-fluid/workflows/Test/badge.svg)
 ![formatted with prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
-[PostCSS](https://github.com/postcss/postcss) plugin for using fluid values in css.
+[PostCSS](https://github.com/postcss/postcss) plugin that makes it easier to work with fluid, responsive values.
+
+Want to make your font-size 1rem on screens smaller than 40rem and scale it up to 1.25rem on desktops (120rem)?  
+It's trivial with this plugin:
 
 ```css
+/* Input */
 .fluid-typography {
   font-size: fluid(1rem, 1.25rem, 40rem, 120rem);
 }
 ```
 
 ```css
+/* Output */
 .fluid-typography {
   font-size: clamp(1rem, 0.875rem + 0.3125vw, 1.25rem);
 }
 ```
+
+This is called fluid typography, you can read more about the topic in this excellent blog post: [smashingmagazine.com/2016/05/fluid-typography](https://www.smashingmagazine.com/2016/05/fluid-typography/).
+
+Coming up with the right `clamp` value is hard, that's why we have sites like [responsive font calculator](https://websemantics.uk/tools/responsive-font-calculator/), [fluid typography calculator](https://royalfig.github.io/fluid-typography-calculator/) or [frontend tools](https://lehoczky.github.io/frontend-tools/) that take your min and max value, min and max viewport size and output the right expression. You just have to copy it into your css.
+
+The purpose of this plugin is to bring this functionality into your stylesheets without the need of any external website.
 
 ## Setup
 
@@ -85,7 +96,7 @@ you can even mix the two examples above and use **pixels** for the **values** an
 
 ```css
 .foo {
-  /* Notice that the output uses the same unit that's given the value parameters */
+  /* Notice that the output uses the same unit that's given to the value parameters */
   margin: clamp(1rem, 0.5rem + 1.25vw, 2rem);
   letter-spacing: clamp(1px, 0.5px + 0.0781vw, 2px);
 }
@@ -142,4 +153,21 @@ require("@lehoczky/postcss-fluid")({
   min: 640,
   max: 1920,
 })
+```
+
+## Stylelint
+
+If you use [stylelint](https://stylelint.io/) in your project and it warns about the function, add this to your `.stylelintrc`:
+
+```json
+{
+  "rules": {
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["fluid"]
+      }
+    ]
+  }
+}
 ```

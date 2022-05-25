@@ -19,37 +19,38 @@ export function hasFluidFunction(value: string) {
 
 export function applyFluidFunction(node: FunctionNode, options: ParsedOptions) {
   const func = node
-  const parsedParameters = getParsedParameters(func, options)
-  const parameterValuesAndUnit = getParameterValuesAndUnit(parsedParameters)
-  const clamp = getClamp(...parameterValuesAndUnit)
+  const parsedArguments = getParsedArguments(func, options)
+  const argumentValuesAndUnit = getArgumentValuesAndUnit(parsedArguments)
+  const clamp = getClamp(...argumentValuesAndUnit)
   return valueParser(clamp).nodes[0]
 }
 
-function getParsedParameters(
+function getParsedArguments(
   functionNode: FunctionNode,
   options: ParsedOptions
 ): Dimension[] {
-  let params = functionNode.nodes
+  const rawArgs = functionNode.nodes
     .filter((node) => node.type === "word")
     .map((node) => node.value)
-    .map((value) => valueParser.unit(value))
+  let args = rawArgs.map((value) => valueParser.unit(value))
 
-  if (params.length === 2 && options) {
-    params = [...params, options.min, options.max]
+  if (args.length === 2 && options) {
+    args = [...args, options.min, options.max]
   }
 
-  if (params.length !== 4) {
-    throw new Error("Function expects 4 parameters")
+  if (args.length !== 4) {
+    throw new Error(`Function expects 4 arguments, but got: ${args.length}`)
   }
-  for (const param of params) {
-    if (isBoolean(param)) {
-      throw new Error(`Parameter "${param}"'s quantity cannot be parsed`)
+  args.forEach((argument, i) => {
+    if (isBoolean(argument)) {
+      const originalArg = rawArgs[i]
+      throw new Error(`Argument "${originalArg}"'s quantity cannot be parsed`)
     }
-  }
-  return params as Dimension[]
+  })
+  return args as Dimension[]
 }
 
-function getParameterValuesAndUnit([
+function getArgumentValuesAndUnit([
   minValueDimension,
   maxValueDimension,
   minViewportDimension,

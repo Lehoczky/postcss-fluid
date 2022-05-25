@@ -21,7 +21,13 @@ const pluginCreator = (opts: Options = {}): Plugin => {
 
       const parsedValue = valueParser(value)
       const newNodes = parsedValue.nodes.map((node) => {
-        return isFluidFunction(node) ? applyFluidFunction(node, options) : node
+        try {
+          return isFluidFunction(node)
+            ? applyFluidFunction(node, options)
+            : node
+        } catch (error: any) {
+          throw decl.error(error.message)
+        }
       })
 
       decl.value = valueParser.stringify(newNodes)

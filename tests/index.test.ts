@@ -151,25 +151,25 @@ describe("alternative unit values", () => {
 })
 
 describe("bad function declarations", () => {
-  it("throws when missing a parameter", async () => {
+  it("throws when missing an argument", async () => {
     const input = `
       a {
         font-size: fluid(1rem, 1.5rem, 640px)
       }
     `
-    await runAndExpectToThrow(input, "expects 4 parameters")
+    await runAndExpectToThrow(input, "expects 4 arguments, but got: 3")
   })
 
-  it("throws when having too many parameters", async () => {
+  it("throws when having too many arguments", async () => {
     const input = `
       a {
         font-size: fluid(1rem, 1.5rem, 640px, 1920px, 1920px)
       }
     `
-    await runAndExpectToThrow(input, "expects 4 parameters")
+    await runAndExpectToThrow(input, "expects 4 arguments, but got: 5")
   })
 
-  it("throws when a parameter's quantity is not a number", async () => {
+  it("throws when a argument's quantity is not a number", async () => {
     const input = `
       a {
         font-size: fluid(1rem, 1.5rem, black, 1920px)
@@ -178,7 +178,7 @@ describe("bad function declarations", () => {
     await runAndExpectToThrow(input, "cannot be parsed")
   })
 
-  it("throws when value parameter units doesn't match", async () => {
+  it("throws when value argument units doesn't match", async () => {
     const input = `
       a {
         font-size: fluid(1rem, 20px, 640px, 1920px)
@@ -187,7 +187,7 @@ describe("bad function declarations", () => {
     await runAndExpectToThrow(input, "Value units does not match")
   })
 
-  it("throws when viewport parameter units doesn't match", async () => {
+  it("throws when viewport argument units doesn't match", async () => {
     const input = `
       a {
         font-size: fluid(1rem, 1.5rem, 640px, 120rem)

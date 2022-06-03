@@ -148,6 +148,64 @@ describe("alternative unit values", () => {
     `
     await run(input, output)
   })
+
+  it("works when the min value is 0 without a unit and the max is in px", async () => {
+    const input = `
+      a {
+        font-size: fluid(0, 80px, 640px, 1920px)
+      }
+    `
+    const output = `
+      a {
+        font-size: clamp(0px, -40px + 6.25vw, 80px)
+      }
+    `
+    await run(input, output)
+  })
+
+  it("works when the min value is 0 without a unit and the max is in rem", async () => {
+    const input = `
+      a {
+        font-size: fluid(0, 1.5rem, 40rem, 120rem)
+      }
+    `
+    const output = `
+      a {
+        font-size: clamp(0rem, -0.75rem + 1.875vw, 1.5rem)
+      }
+    `
+    await run(input, output)
+  })
+
+  it("works when the max value is 0 without a unit and the min is in rem", async () => {
+    const input = `
+      a {
+        margin-top: fluid(-10rem, 0, 40rem, 120rem)
+      }
+    `
+    const output = `
+      a {
+        margin-top: clamp(-10rem, -15rem + 12.5vw, 0rem)
+      }
+    `
+    await run(input, output)
+  })
+
+  it("works when both values are 0 without a unit", async () => {
+    // Don't know why anyone would do this, but it's better to support it
+    // than giving and unrelated error
+    const input = `
+      a {
+        font-size: fluid(0, 0, 40rem, 120rem)
+      }
+    `
+    const output = `
+      a {
+        font-size: clamp(0rem, 0vw, 0rem)
+      }
+    `
+    await run(input, output)
+  })
 })
 
 describe("bad function declarations", () => {

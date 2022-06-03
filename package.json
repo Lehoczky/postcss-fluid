@@ -2,7 +2,7 @@
   "name": "@lehoczky/postcss-fluid",
   "version": "1.0.1",
   "private": false,
-  "description": "PostCSS plugin for using fluid values in css",
+  "description": "PostCSS plugin that makes it easier to work with fluid css values.",
   "scripts": {
     "build": "tsc",
     "lint": "npm run eslint:check && npm run format:check",

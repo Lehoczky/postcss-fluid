@@ -8,6 +8,7 @@ import { ParsedOptions } from "./options"
 import {
   checkWhetherUnitIsAllowed,
   isBoolean,
+  isZeroWithoutUnit,
   round,
   toPX,
   toREMWithFixedPrecision,
@@ -56,21 +57,36 @@ function getArgumentValuesAndUnit([
   minViewportDimension,
   maxViewportDimension,
 ]: Dimension[]): [number, number, number, number, string] {
-  if (minValueDimension.unit !== maxValueDimension.unit) {
+  const _minValueDimension = { ...minValueDimension }
+  const _maxValueDimension = { ...maxValueDimension }
+
+  if (
+    isZeroWithoutUnit(_minValueDimension) &&
+    isZeroWithoutUnit(_maxValueDimension)
+  ) {
+    _minValueDimension.unit = "rem"
+    _maxValueDimension.unit = "rem"
+  } else if (isZeroWithoutUnit(_minValueDimension)) {
+    _minValueDimension.unit = _maxValueDimension.unit
+  } else if (isZeroWithoutUnit(_maxValueDimension)) {
+    _maxValueDimension.unit = _minValueDimension.unit
+  }
+
+  if (_minValueDimension.unit !== _maxValueDimension.unit) {
     throw new Error("Value units does not match")
   }
   if (minViewportDimension.unit !== maxViewportDimension.unit) {
     throw new Error("Viewport units does not match")
   }
 
-  checkWhetherUnitIsAllowed(minValueDimension)
+  checkWhetherUnitIsAllowed(_minValueDimension)
   checkWhetherUnitIsAllowed(minViewportDimension)
 
-  const outputUnit = minValueDimension.unit
+  const outputUnit = _minValueDimension.unit
   const currentViewportUnit = minViewportDimension.unit
 
-  const minValue = Number(minValueDimension.number)
-  const maxValue = Number(maxValueDimension.number)
+  const minValue = Number(_minValueDimension.number)
+  const maxValue = Number(_maxValueDimension.number)
   let minViewport = Number(minViewportDimension.number)
   let maxViewport = Number(maxViewportDimension.number)
 

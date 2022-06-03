@@ -37,3 +37,7 @@ export function checkWhetherUnitIsAllowed({ unit }: Dimension): void {
     )
   }
 }
+
+export function isZeroWithoutUnit(dimension: Dimension) {
+  return dimension.number === "0" && !dimension.unit
+}

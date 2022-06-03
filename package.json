@@ -1,6 +1,6 @@
 {
   "name": "@lehoczky/postcss-fluid",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "description": "PostCSS plugin that makes it easier to work with fluid css values.",
   "scripts": {

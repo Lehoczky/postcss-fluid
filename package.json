@@ -7,7 +7,7 @@
     "build": "tsc",
     "lint": "npm run eslint:check && npm run format:check",
     "eslint:check": "eslint . --ext .ts --max-warnings=0 --ignore-path=.gitignore",
-    "format:check": "prettier \"./**\" --check --ignore-path=.gitignore --ignore-unknown",
+    "format:check": "prettier \"./**\" --check --ignore-unknown",
     "test": "vitest run --coverage"
   },
   "main": "dist/index.js",

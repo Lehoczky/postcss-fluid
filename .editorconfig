@@ -8,10 +8,10 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{html,js,ts,css,vue}]
+[*.{html,js,cjs,mjs,ts,css,vue}]
 indent_size = 2
 
-[*.{py}]
+[*.py]
 indent_size = 4
 
 [*.md]

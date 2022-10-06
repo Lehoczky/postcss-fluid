@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl mb-6;
+  }
+
+  section {
+    @apply my-12;
+  }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+.shiki {
+  @apply p-4 rounded w-fit mb-5;
+}

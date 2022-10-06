@@ -5,10 +5,12 @@
   "description": "PostCSS plugin that makes it easier to work with fluid css values.",
   "scripts": {
     "build": "tsc",
-    "lint": "npm run eslint:check && npm run format:check",
-    "eslint:check": "eslint . --ext .ts --max-warnings=0 --ignore-path=.gitignore",
+    "lint": "npm run eslint:check && npm run styles:check && npm run format:check",
+    "eslint:check": "eslint . --ext .ts,js,vue --max-warnings=0 --ignore-path=.gitignore",
+    "styles:check": "stylelint \"./**/*.{css,vue}\" --ignore-path=.gitignore",
     "format:check": "prettier \"./**\" --check --ignore-unknown",
-    "test": "vitest run --coverage"
+    "test": "vitest run --coverage",
+    "demo:deploy": "gh-pages -d demo/dist -t true"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -33,9 +35,17 @@
     "@vitest/coverage-c8": "^0.23.4",
     "eslint": "^8.24.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-define-config": "^1.7.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-vue": "^9.6.0",
+    "gh-pages": "^4.0.0",
     "postcss": "^8.4.17",
+    "postcss-html": "^1.5.0",
     "prettier": "^2.7.1",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^28.0.0",
     "typescript": "^4.8.4",
     "vitest": "^0.23.4"
   },

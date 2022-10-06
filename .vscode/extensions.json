@@ -4,6 +4,8 @@
     "dbaeumer.vscode-eslint",
     "davidanson.vscode-markdownlint",
     "esbenp.prettier-vscode",
-    "ZixuanChen.vitest-explorer"
+    "zixuanchen.vitest-explorer",
+    "stylelint.vscode-stylelint",
+    "streetsidesoftware.code-spell-checker"
   ]
 }

@@ -16,6 +16,9 @@ export default defineNuxtConfig({
     ],
   },
   css: ["@/assets/css/main.css"],
+  app: {
+    baseURL: "/postcss-fluid/",
+  },
   postcss: {
     plugins: {
       tailwindcss: {},

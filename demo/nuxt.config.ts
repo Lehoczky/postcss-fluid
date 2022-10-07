@@ -26,4 +26,7 @@ export default defineNuxtConfig({
       "@lehoczky/postcss-fluid": {},
     },
   },
+  experimental: {
+    noScripts: true,
+  },
 })

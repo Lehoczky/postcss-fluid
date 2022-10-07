@@ -9,8 +9,7 @@
     "eslint:check": "eslint . --ext .ts,js,vue --max-warnings=0 --ignore-path=.gitignore",
     "styles:check": "stylelint \"./**/*.{css,vue}\" --ignore-path=.gitignore",
     "format:check": "prettier \"./**\" --check --ignore-unknown",
-    "test": "vitest run --coverage",
-    "demo:deploy": "gh-pages -d demo/dist -t true"
+    "test": "vitest run --coverage"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -38,7 +37,6 @@
     "eslint-define-config": "^1.7.0",
     "eslint-plugin-simple-import-sort": "^8.0.0",
     "eslint-plugin-vue": "^9.6.0",
-    "gh-pages": "^4.0.0",
     "postcss": "^8.4.17",
     "postcss-html": "^1.5.0",
     "prettier": "^2.7.1",
@@ -64,5 +62,6 @@
   "repository": {
     "url": "https://github.com/Lehoczky/postcss-fluid.git",
     "type": "git"
-  }
+  },
+  "packageManager": "pnpm@7.13.2"
 }

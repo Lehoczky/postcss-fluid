@@ -29,6 +29,10 @@ Coming up with the right `clamp` value is hard, that's why we have sites like [r
 
 The purpose of this plugin is to bring this functionality into your stylesheets without the need of any external website.
 
+## Demo
+
+Demo is available at <https://lehoczky.github.io/postcss-fluid/>
+
 ## Setup
 
 **Step 1:** Install plugin:

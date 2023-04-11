@@ -1,1 +1,0 @@
-import{a as e,o,b as _}from"./entry.a7cceab3.js";import{_ as r}from"./_plugin-vue_export-helper.c27b6911.js";const t={class:"fluid-border"},s=e({__name:"border",setup(a){return(c,n)=>(o(),_("div",t))}});const f=r(s,[["__scopeId","data-v-77fea550"]]);export{f as default};

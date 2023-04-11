@@ -1,0 +1,1 @@
+import{a as e,o,b as _}from"./entry.b601499f.js";import{_ as s}from"./_plugin-vue_export-helper.c27b6911.js";const t={class:"box-to-circle"},a=e({__name:"border-radius",setup(r){return(c,n)=>(o(),_("div",t))}});const i=s(a,[["__scopeId","data-v-78fb98a8"]]);export{i as default};

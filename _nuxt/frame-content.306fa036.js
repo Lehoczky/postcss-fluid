@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.c27b6911.js";import{b as s,v as t,o as r}from"./entry.a7cceab3.js";const n={},c={class:"bg-base-600 h-screen px-6 py-8"};function a(e,_){return r(),s("div",c,[t(e.$slots,"default")])}const d=o(n,[["render",a]]);export{d as default};

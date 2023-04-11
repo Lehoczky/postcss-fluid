@@ -9,7 +9,8 @@
     "eslint:check": "eslint . --ext .ts,js,vue --max-warnings=0 --ignore-path=.gitignore",
     "styles:check": "stylelint \"./**/*.{css,vue}\" --ignore-path=.gitignore",
     "format:check": "prettier \"./**\" --check --ignore-unknown",
-    "test": "vitest run --coverage"
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

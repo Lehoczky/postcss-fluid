@@ -15,7 +15,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7
+          version: 8
 
       - name: Install Node.js
         uses: actions/setup-node@v2
@@ -30,7 +30,7 @@ jobs:
         run: pnpm run lint
 
       - name: Run tests
-        run: pnpm test
+        run: pnpm test:coverage
 
   short:
     runs-on: ubuntu-latest
@@ -47,7 +47,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
-          version: 7
+          version: 8
 
       - name: Install Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
@@ -59,4 +59,4 @@ jobs:
         run: pnpm install
 
       - name: Run unit tests
-        run: pnpm vitest run
+        run: pnpm test

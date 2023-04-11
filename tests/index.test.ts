@@ -1,7 +1,6 @@
 import postcss from "postcss"
 import { describe, expect, it } from "vitest"
 
-// @ts-expect-error
 import plugin from "../lib/index.js"
 import type { Options } from "../lib/options.js"
 

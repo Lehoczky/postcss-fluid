@@ -36,4 +36,4 @@ const pluginCreator = (opts: Options = {}): Plugin => {
 }
 pluginCreator.postcss = true
 
-module.exports = pluginCreator
+export = pluginCreator

@@ -6,6 +6,7 @@ export const useShiki = async (code: Ref<string>, hlOptions = {}) => {
   const init = async () => {
     const { getHighlighter } = await import("shiki-es")
     const highlighter = await getHighlighter({
+      langs: ["css"],
       theme: "one-dark-pro",
     })
     codeToHtml.value = () => highlighter.codeToHtml(code.value, hlOptions)

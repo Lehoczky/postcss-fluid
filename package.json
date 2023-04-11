@@ -28,24 +28,24 @@
     "postcss-value-parser": "^4.2.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.45",
-    "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
-    "@vitest/coverage-c8": "^0.23.4",
-    "eslint": "^8.24.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-define-config": "^1.7.0",
-    "eslint-plugin-simple-import-sort": "^8.0.0",
-    "eslint-plugin-vue": "^9.6.0",
-    "postcss": "^8.4.17",
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@vitest/coverage-c8": "^0.30.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-define-config": "^1.17.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "postcss": "^8.4.21",
     "postcss-html": "^1.5.0",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.13.0",
-    "stylelint-config-prettier": "^9.0.3",
+    "prettier": "^2.8.7",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended-vue": "^1.4.0",
-    "stylelint-config-standard": "^28.0.0",
-    "typescript": "^4.8.4",
-    "vitest": "^0.23.4"
+    "stylelint-config-standard": "^29.0.0",
+    "typescript": "^5.0.4",
+    "vitest": "^0.30.0"
   },
   "keywords": [
     "postcss",
@@ -63,5 +63,5 @@
     "url": "https://github.com/Lehoczky/postcss-fluid.git",
     "type": "git"
   },
-  "packageManager": "pnpm@7.13.2"
+  "packageManager": "pnpm@8.2.0"
 }

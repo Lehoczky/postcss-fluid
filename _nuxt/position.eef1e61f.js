@@ -1,0 +1,1 @@
+import{a as o,o as s,b as t,p as _,f as a,h as c,e as p}from"./entry.bc847df5.js";const n=e=>(_("data-v-45f663de"),e=e(),a(),e),d={class:"relative h-12 w-full"},i=n(()=>c("div",{class:"positioned-box"},null,-1)),l=[i],r=o({__name:"position",setup(e){return(f,u)=>(s(),t("div",d,l))}});const v=p(r,[["__scopeId","data-v-45f663de"]]);export{v as default};

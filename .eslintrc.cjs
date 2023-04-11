@@ -23,6 +23,7 @@ module.exports = defineConfig({
     "@typescript-eslint/array-type": ["warn", { default: "array-simple" }],
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "simple-import-sort/imports": "warn",
   },
   overrides: [
@@ -38,6 +39,7 @@ module.exports = defineConfig({
         "no-undef": "off",
         "vue/html-self-closing": ["warn", { html: { void: "always" } }],
         "vue/no-v-html": "off",
+        "vue/multi-word-component-names": "off",
       },
     },
   ],

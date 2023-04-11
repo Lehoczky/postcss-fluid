@@ -7,5 +7,5 @@
   "eslint.validate": ["javascript", "typescript", "vue"],
   "css.validate": false,
   "stylelint.validate": ["css", "vue"],
-  "cSpell.words": ["Shiki"]
+  "cSpell.words": ["octo", "octocat", "postcss", "Shiki", "vueuse"]
 }

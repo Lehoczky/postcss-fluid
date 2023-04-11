@@ -4,15 +4,11 @@
 
 @layer base {
   h1 {
-    @apply text-4xl;
+    @apply text-3xl sm:text-4xl;
   }
 
   h2 {
-    @apply text-3xl mb-6;
-  }
-
-  section {
-    @apply my-12;
+    @apply mb-6 text-2xl sm:text-3xl;
   }
 }
 
@@ -21,5 +17,5 @@
 }
 
 .shiki {
-  @apply p-4 rounded w-fit mb-5;
+  @apply overflow-x-auto p-4;
 }

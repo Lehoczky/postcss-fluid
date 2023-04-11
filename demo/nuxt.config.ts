@@ -4,6 +4,20 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/postcss-fluid/",
     head: {
+      title: "PostCSS Fluid Demo",
+      htmlAttrs: {
+        lang: "en-US",
+      },
+      meta: [
+        {
+          name: "description",
+          content: "Demo site for the @lehoczky/postcss-fluid plugin.",
+        },
+        {
+          name: "keywords",
+          content: "PostCSS, Fluid Typography, CSS, Viewport Units",
+        },
+      ],
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
@@ -15,7 +29,15 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap",
         },
+        {
+          rel: "icon",
+          href: "/postcss-fluid/favicon.svg",
+          type: "image/svg+xml",
+        },
       ],
+      bodyAttrs: {
+        class: "bg-base-800 font-poppins text-base-300",
+      },
     },
   },
   postcss: {
@@ -25,7 +47,10 @@ export default defineNuxtConfig({
       "@lehoczky/postcss-fluid": {},
     },
   },
-  experimental: {
-    noScripts: true,
+  modules: ["@vueuse/nuxt"],
+  routeRules: {
+    "/example/**": {
+      experimentalNoScripts: true,
+    },
   },
 })

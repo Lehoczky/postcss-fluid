@@ -14,7 +14,7 @@
     "function-no-unknown": [
       true,
       {
-        "ignoreFunctions": ["fluid", "theme"]
+        "ignoreFunctions": ["fluid", "theme", "v-bind"]
       }
     ]
   }

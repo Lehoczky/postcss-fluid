@@ -1,0 +1,1 @@
+import{a as e,o,b as _}from"./entry.a7cceab3.js";import{_ as s}from"./_plugin-vue_export-helper.c27b6911.js";const t={class:"growing-square"},n=e({__name:"growing",setup(r){return(a,c)=>(o(),_("div",t))}});const g=s(n,[["__scopeId","data-v-5f20e403"]]);export{g as default};

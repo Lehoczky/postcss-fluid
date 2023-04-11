@@ -1,0 +1,1 @@
+import{a as e,o as s,b as _}from"./entry.a7cceab3.js";import{_ as n}from"./_plugin-vue_export-helper.c27b6911.js";const o={class:"shrinking-square"},t=e({__name:"shrinking",setup(c){return(r,a)=>(s(),_("div",o))}});const d=n(t,[["__scopeId","data-v-e0c793b8"]]);export{d as default};

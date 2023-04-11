@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.c27b6911.js";import{b as t,v as r,o as s}from"./entry.b601499f.js";const n={},a={class:"bg-base-600 h-screen overflow-auto px-6 py-8"};function c(e,f){return s(),t("div",a,[r(e.$slots,"default")])}const d=o(n,[["render",c]]);export{d as default};

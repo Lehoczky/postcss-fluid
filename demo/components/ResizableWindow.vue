@@ -34,7 +34,16 @@
       <IconHamburgerMenu class="hidden" :class="{ 'sm:block': containerSm }" />
     </div>
 
-    <slot />
+    <div class="relative grid place-items-stretch">
+      <div
+        v-if="dimensionBoxShown"
+        class="text-base-700 absolute right-0 top-px bg-white bg-opacity-60 p-1 text-xs leading-none"
+      >
+        {{ dimension }}
+      </div>
+
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -42,7 +51,7 @@
 const MAX_WIDTH_ON_DESKTOP = 896
 
 const root = ref<HTMLElement>()
-const { width } = useElementSize(root, {
+const { width, height } = useElementSize(root, {
   width: MAX_WIDTH_ON_DESKTOP,
   height: 0,
 })
@@ -50,4 +59,23 @@ const { width } = useElementSize(root, {
 // Could use container queries, but browser support is not that good yet
 const containerSm = computed(() => width.value >= 600)
 const maxWidthForCSS = computed(() => `${MAX_WIDTH_ON_DESKTOP}px`)
+
+const widthRounded = useRound(width)
+const heightRounded = useRound(height)
+const dimension = computed(() => {
+  return `${widthRounded.value}px × ${heightRounded.value}px`
+})
+
+const dimensionBoxShown = ref(false)
+function showDimensionBox() {
+  dimensionBoxShown.value = true
+}
+const hideDimensionBoxDebounced = useDebounceFn(
+  () => (dimensionBoxShown.value = false),
+  1500
+)
+watchWithFirstUpdateSkipped(dimension, () => {
+  showDimensionBox()
+  hideDimensionBoxDebounced()
+})
 </script>

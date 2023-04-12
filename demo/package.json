@@ -10,6 +10,7 @@
   "devDependencies": {
     "@lehoczky/postcss-fluid": "link:../",
     "@vueuse/core": "^9.13.0",
+    "@vueuse/math": "^9.13.0",
     "@vueuse/nuxt": "^9.13.0",
     "autoprefixer": "^10.4.14",
     "gh-pages": "^5.0.0",

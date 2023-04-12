@@ -12,6 +12,9 @@ devDependencies:
   '@vueuse/core':
     specifier: ^9.13.0
     version: 9.13.0(vue@3.2.47)
+  '@vueuse/math':
+    specifier: ^9.13.0
+    version: 9.13.0(vue@3.2.47)
   '@vueuse/nuxt':
     specifier: ^9.13.0
     version: 9.13.0(nuxt@3.4.0)(vue@3.2.47)
@@ -1146,6 +1149,16 @@ packages:
     dependencies:
       '@types/web-bluetooth': 0.0.16
       '@vueuse/metadata': 9.13.0
+      '@vueuse/shared': 9.13.0(vue@3.2.47)
+      vue-demi: 0.13.11(vue@3.2.47)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+    dev: true
+
+  /@vueuse/math@9.13.0(vue@3.2.47):
+    resolution: {integrity: sha512-FE2n8J1AfBb4dNvNyE6wS+l87XDcC/y3/037AmrwonsGD5QwJJl6rGr57idszs3PXTuEYcEkDysHLxstSxbQEg==}
+    dependencies:
       '@vueuse/shared': 9.13.0(vue@3.2.47)
       vue-demi: 0.13.11(vue@3.2.47)
     transitivePeerDependencies:

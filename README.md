@@ -1,6 +1,7 @@
 # postcss-fluid
 
 [![NPM version](https://img.shields.io/npm/v/@lehoczky/postcss-fluid.svg)](https://www.npmjs.com/package/@lehoczky/postcss-fluid)
+![lint status](https://github.com/lehoczky/postcss-fluid/workflows/Lint/badge.svg)
 ![test status](https://github.com/lehoczky/postcss-fluid/workflows/Test/badge.svg)
 ![formatted with prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
@@ -174,4 +175,45 @@ If you use [stylelint](https://stylelint.io/) in your project and it warns about
     ]
   }
 }
+```
+
+## Tailwindcss
+
+This plugin works with [tailwindcss](https://tailwindcss.com/) too.
+
+Minimal `postcss.config.js`:
+
+```js
+module.exports = {
+  plugins: [
+    require("@lehoczky/postcss-fluid"),
+    require("tailwindcss"),
+    require("autoprefixer"),
+  ],
+}
+```
+
+You can use the `fluid` function in `tailwind.config.js` files:
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{html,js}"],
+  theme: {
+    extend: {
+      spacing: {
+        fluid: "fluid(1.25rem, 3.25rem, 640px, 1536px)",
+      },
+    },
+  },
+  plugins: [],
+}
+```
+
+Or with [value interpolation](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values):
+
+```html
+<main class="mt-[fluid(1.25rem,3rem,640px,1536px)]">
+  This content has fluid top margin
+</main>
 ```

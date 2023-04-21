@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 1.0.3 — 21 April 2023
+
+- Show more detailed error messages
+
 ## 1.0.2 — 03 June 2022
 
 - Handle 0 values without unit

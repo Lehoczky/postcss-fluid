@@ -41,3 +41,7 @@ export function checkWhetherUnitIsAllowed({ unit }: Dimension): void {
 export function isZeroWithoutUnit(dimension: Dimension) {
   return dimension.number === "0" && !dimension.unit
 }
+
+export function unitsNotMatch(dimension1: Dimension, dimension2: Dimension) {
+  return dimension1.unit !== dimension2.unit
+}

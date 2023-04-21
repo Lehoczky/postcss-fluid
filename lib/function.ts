@@ -4,6 +4,7 @@ import valueParser, {
   type Node,
 } from "postcss-value-parser"
 
+import { DimensionUnitsNotMatchError } from "./errors"
 import { ParsedOptions } from "./options"
 import {
   checkWhetherUnitIsAllowed,
@@ -12,6 +13,7 @@ import {
   round,
   toPX,
   toREMWithFixedPrecision,
+  unitsNotMatch,
 } from "./utils"
 
 export function hasFluidFunction(value: string) {
@@ -72,11 +74,19 @@ function getArgumentValuesAndUnit([
     _maxValueDimension.unit = _minValueDimension.unit
   }
 
-  if (_minValueDimension.unit !== _maxValueDimension.unit) {
-    throw new Error("Value units does not match")
+  if (unitsNotMatch(_minValueDimension, _maxValueDimension)) {
+    throw new DimensionUnitsNotMatchError(
+      "Value",
+      _minValueDimension,
+      _maxValueDimension
+    )
   }
-  if (minViewportDimension.unit !== maxViewportDimension.unit) {
-    throw new Error("Viewport units does not match")
+  if (unitsNotMatch(minViewportDimension, maxViewportDimension)) {
+    throw new DimensionUnitsNotMatchError(
+      "Viewport",
+      minViewportDimension,
+      maxViewportDimension
+    )
   }
 
   checkWhetherUnitIsAllowed(_minValueDimension)

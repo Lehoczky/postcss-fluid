@@ -235,22 +235,28 @@ describe("bad function declarations", () => {
     await runAndExpectToThrow(input, "cannot be parsed")
   })
 
-  it("throws when value argument units doesn't match", async () => {
+  it("throws when value argument units don't match", async () => {
     const input = `
       a {
         font-size: fluid(1rem, 20px, 640px, 1920px)
       }
     `
-    await runAndExpectToThrow(input, "Value units does not match")
+    await runAndExpectToThrow(
+      input,
+      "Value units do not match for 1rem and 20px"
+    )
   })
 
-  it("throws when viewport argument units doesn't match", async () => {
+  it("throws when viewport argument units don't match", async () => {
     const input = `
       a {
         font-size: fluid(1rem, 1.5rem, 640px, 120rem)
       }
     `
-    await runAndExpectToThrow(input, "Viewport units does not match")
+    await runAndExpectToThrow(
+      input,
+      "Viewport units do not match for 640px and 120rem"
+    )
   })
 
   it("throws when using an unsupported value unit", async () => {
@@ -416,7 +422,7 @@ describe("plugin options", () => {
     await runAndExpectToThrowWithOptions(
       input,
       options,
-      "Viewport units does not match"
+      "Viewport units do not match"
     )
   })
 

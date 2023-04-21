@@ -1,6 +1,7 @@
 import valueParser, { type Dimension } from "postcss-value-parser"
 
-import { checkWhetherUnitIsAllowed, isNumber } from "./utils"
+import { OptionViewportUnitNotMatchError } from "./errors"
+import { checkWhetherUnitIsAllowed, isNumber, unitsNotMatch } from "./utils"
 
 export type Options = {
   min?: number | string
@@ -28,8 +29,8 @@ export function parseOptions(options: Options): ParsedOptions {
   const parsedMin = isNumber(min) ? toPixelDimension(min) : parseDimension(min)
   const parsedMax = isNumber(max) ? toPixelDimension(max) : parseDimension(max)
 
-  if (parsedMin.unit !== parsedMax.unit) {
-    throw new Error("Viewport units does not match in the plugin options")
+  if (unitsNotMatch(parsedMin, parsedMax)) {
+    throw new OptionViewportUnitNotMatchError(parsedMin, parsedMax)
   }
 
   return {

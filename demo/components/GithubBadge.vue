@@ -28,7 +28,7 @@
   animation: octocat-wave 560ms ease-in-out;
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .github-corner .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }

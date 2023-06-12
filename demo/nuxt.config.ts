@@ -19,16 +19,6 @@ export default defineNuxtConfig({
         },
       ],
       link: [
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "",
-        },
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap",
-        },
         {
           rel: "icon",
           href: "/postcss-fluid/favicon.svg",
@@ -43,14 +33,24 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
+      "postcss-preset-env": {},
       autoprefixer: {},
       "@lehoczky/postcss-fluid": {},
     },
   },
-  modules: ["@vueuse/nuxt"],
+  modules: ["@vueuse/nuxt", "@nuxtjs/google-fonts"],
   routeRules: {
     "/example/**": {
       experimentalNoScripts: true,
+    },
+  },
+  googleFonts: {
+    preload: true,
+    download: false,
+    families: {
+      Poppins: {
+        wght: [400, 500],
+      },
     },
   },
 })

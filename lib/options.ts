@@ -16,12 +16,12 @@ export function parseOptions(options: Options): ParsedOptions {
   }
   if (!options.min) {
     throw new Error(
-      "You have to define both min and max values for defaults to work, but min is missing."
+      "You have to define both min and max values for defaults to work, but min is missing.",
     )
   }
   if (!options.max) {
     throw new Error(
-      "You have to define both min and max values for defaults to work, but max is missing."
+      "You have to define both min and max values for defaults to work, but max is missing.",
     )
   }
 

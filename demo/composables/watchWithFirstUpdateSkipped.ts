@@ -3,7 +3,7 @@ import { WatchCallback, WatchOptions, WatchSource } from "vue"
 export function watchWithFirstUpdateSkipped<T>(
   source: WatchSource<T>,
   callback: WatchCallback<T>,
-  options?: WatchOptions
+  options?: WatchOptions,
 ) {
   const isFirstUpdate = ref(true)
   const wrappedCallback: typeof callback = (value, oldValue, onCleanup) => {

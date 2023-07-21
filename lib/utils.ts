@@ -33,7 +33,7 @@ const ALLOWED_UNITS = ["px", "rem"]
 export function checkWhetherUnitIsAllowed({ unit }: Dimension): void {
   if (!ALLOWED_UNITS.includes(unit)) {
     throw new Error(
-      `Unsupported unit: "${unit}". Please use "px" or "rem" instead`
+      `Unsupported unit: "${unit}". Please use "px" or "rem" instead`,
     )
   }
 }

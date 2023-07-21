@@ -14,7 +14,7 @@ async function run(input: string, output: string, opts: Options = {}) {
 
 async function runAndExpectToThrow(
   input: string,
-  error: string | Error | RegExp
+  error: string | Error | RegExp,
 ) {
   async function tryToRun() {
     await postcss([plugin()]).process(input, { from: undefined })
@@ -25,7 +25,7 @@ async function runAndExpectToThrow(
 async function runAndExpectToThrowWithOptions(
   input: string,
   opts: Options,
-  error: string | Error | RegExp
+  error: string | Error | RegExp,
 ) {
   async function tryToRun() {
     await postcss([plugin(opts)]).process(input, { from: undefined })
@@ -243,7 +243,7 @@ describe("bad function declarations", () => {
     `
     await runAndExpectToThrow(
       input,
-      "Value units do not match for 1rem and 20px"
+      "Value units do not match for 1rem and 20px",
     )
   })
 
@@ -255,7 +255,7 @@ describe("bad function declarations", () => {
     `
     await runAndExpectToThrow(
       input,
-      "Viewport units do not match for 640px and 120rem"
+      "Viewport units do not match for 640px and 120rem",
     )
   })
 
@@ -388,7 +388,7 @@ describe("plugin options", () => {
     await runAndExpectToThrowWithOptions(
       input,
       options,
-      `Unsupported unit: "em`
+      `Unsupported unit: "em`,
     )
   })
 
@@ -405,7 +405,7 @@ describe("plugin options", () => {
     await runAndExpectToThrowWithOptions(
       input,
       options,
-      `Unsupported unit: "vw`
+      `Unsupported unit: "vw`,
     )
   })
 
@@ -422,7 +422,7 @@ describe("plugin options", () => {
     await runAndExpectToThrowWithOptions(
       input,
       options,
-      "Viewport units do not match"
+      "Viewport units do not match",
     )
   })
 

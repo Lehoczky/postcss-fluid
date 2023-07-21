@@ -72,7 +72,7 @@ function showDimensionBox() {
 }
 const hideDimensionBoxDebounced = useDebounceFn(
   () => (dimensionBoxShown.value = false),
-  1500
+  1500,
 )
 watchWithFirstUpdateSkipped(dimension, () => {
   showDimensionBox()

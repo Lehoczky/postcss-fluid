@@ -30,7 +30,7 @@ export function applyFluidFunction(node: FunctionNode, options: ParsedOptions) {
 
 function getParsedArguments(
   functionNode: FunctionNode,
-  options: ParsedOptions
+  options: ParsedOptions,
 ): Dimension[] {
   const rawArgs = functionNode.nodes
     .filter((node) => node.type === "word")
@@ -78,14 +78,14 @@ function getArgumentValuesAndUnit([
     throw new DimensionUnitsNotMatchError(
       "Value",
       _minValueDimension,
-      _maxValueDimension
+      _maxValueDimension,
     )
   }
   if (unitsNotMatch(minViewportDimension, maxViewportDimension)) {
     throw new DimensionUnitsNotMatchError(
       "Viewport",
       minViewportDimension,
-      maxViewportDimension
+      maxViewportDimension,
     )
   }
 
@@ -116,7 +116,7 @@ function getClamp(
   maxValue: number,
   minViewport: number,
   maxViewport: number,
-  unit: string
+  unit: string,
 ) {
   const valueDifference = maxValue - minValue
   const viewportDifference = maxViewport - minViewport

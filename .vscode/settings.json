@@ -4,7 +4,6 @@
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
-  "eslint.validate": ["javascript", "typescript", "vue"],
   "css.validate": false,
   "stylelint.validate": ["css", "vue"],
   "cSpell.words": ["octo", "octocat", "postcss", "Shiki", "vueuse"]

@@ -21,7 +21,7 @@ describe("DimensionUnitsNotMatchError", () => {
     const error = new DimensionUnitsNotMatchError(
       "Value",
       pxDimension,
-      remDimension
+      remDimension,
     )
 
     expect(error.message).toMatch("Value units do not match")
@@ -33,7 +33,7 @@ describe("DimensionUnitsNotMatchError", () => {
     const error = new DimensionUnitsNotMatchError("", pxDimension, remDimension)
 
     expect(error.message).toEqual(
-      "Units do not match for 32px and 1rem\nTry changing 32px to 2rem or 1rem to 16px."
+      "Units do not match for 32px and 1rem\nTry changing 32px to 2rem or 1rem to 16px.",
     )
   })
 
@@ -61,7 +61,7 @@ describe("OptionViewportUnitNotMatchError", () => {
     const error = new OptionViewportUnitNotMatchError(pxDimension, remDimension)
 
     expect(error.message).toEqual(
-      "Viewport units do not match in the plugin options. One of them is px and the other is rem"
+      "Viewport units do not match in the plugin options. One of them is px and the other is rem",
     )
   })
 })

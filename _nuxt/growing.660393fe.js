@@ -1,1 +1,0 @@
-import{f as e,o as _,c as o,_ as s}from"./entry.733cd539.js";const a={class:"growing-square"},n=e({__name:"growing",setup(t){return(c,r)=>(_(),o("div",a))}});const i=s(n,[["__scopeId","data-v-c9ba7a17"]]);export{i as default};

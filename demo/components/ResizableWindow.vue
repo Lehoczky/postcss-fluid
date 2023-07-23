@@ -8,19 +8,10 @@
       class="bg-base-400 flex items-center justify-between gap-4 px-6 py-4"
       :class="{ 'sm:gap-8': containerSm }"
     >
-      <div class="flex gap-1.5" :class="{ 'sm:gap-2': containerSm }">
-        <div
-          class="h-3 w-3 rounded-full bg-red-400"
-          :class="{ 'sm:h-3.5 sm:w-3.5': containerSm }"
-        />
-        <div
-          class="h-3 w-3 rounded-full bg-yellow-400"
-          :class="{ 'sm:h-3.5 sm:w-3.5': containerSm }"
-        />
-        <div
-          class="h-3 w-3 rounded-full bg-green-400"
-          :class="{ 'sm:h-3.5 sm:w-3.5': containerSm }"
-        />
+      <div class="flex gap-2">
+        <div class="h-3.5 w-3.5 rounded-full bg-red-400" />
+        <div class="h-3.5 w-3.5 rounded-full bg-yellow-400" />
+        <div class="h-3.5 w-3.5 rounded-full bg-green-400" />
       </div>
 
       <div

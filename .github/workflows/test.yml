@@ -11,19 +11,17 @@ jobs:
     name: Node.js 16 Full
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
+      - name: Check out Git repository
         uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 8
+      - name: Enable Corepack
+        run: corepack enable
 
-      - name: Install Node.js
-        uses: actions/setup-node@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "pnpm"
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install
@@ -40,21 +38,20 @@ jobs:
       matrix:
         node-version:
           - 18
+          - 20
     name: Node.js ${{ matrix.node-version }} Quick
     steps:
-      - name: Checkout the repository
+      - name: Check out Git repository
         uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2.2.2
-        with:
-          version: 8
+      - name: Enable Corepack
+        run: corepack enable
 
-      - name: Install Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install

@@ -1,12 +1,11 @@
-name: Lint
+name: Publish
 
 on:
-  push:
-  pull_request:
+  - push
 
 jobs:
-  lint:
-    name: Lint
+  publish:
+    name: Publish
     runs-on: ubuntu-latest
 
     steps:
@@ -25,8 +24,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Build
+        run: pnpm build
 
-      - name: Check lint errors
-        run: pnpm lint
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v2
+        with:
+          access: public
+          token: ${{ secrets.NPM_TOKEN }}

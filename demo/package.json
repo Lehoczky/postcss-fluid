@@ -10,14 +10,14 @@
   "devDependencies": {
     "@lehoczky/postcss-fluid": "link:../",
     "@nuxtjs/google-fonts": "^3.0.2",
-    "@vueuse/core": "^10.2.1",
-    "@vueuse/math": "^10.2.1",
-    "@vueuse/nuxt": "^10.2.1",
+    "@vueuse/core": "^10.3.0",
+    "@vueuse/math": "^10.3.0",
+    "@vueuse/nuxt": "^10.3.0",
     "autoprefixer": "^10.4.14",
     "gh-pages": "^5.0.0",
     "nuxt": "3.6.5",
     "postcss": "^8.4.27",
-    "postcss-preset-env": "^9.0.0",
+    "postcss-preset-env": "^9.1.0",
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {

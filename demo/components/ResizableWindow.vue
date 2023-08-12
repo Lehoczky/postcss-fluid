@@ -1,7 +1,7 @@
 <template>
   <div
     ref="root"
-    class="max-w-custom flex min-w-[18.75rem] resize-x flex-col overflow-hidden rounded-xl"
+    class="max-w-custom flex resize-x flex-col overflow-x-auto rounded-xl sm:overflow-hidden"
     :style="{ maxWidth: maxWidthForCSS }"
   >
     <div
@@ -15,11 +15,13 @@
       </div>
 
       <div
-        class="bg-base-500 text-base-300 flex max-w-md flex-1 items-center justify-center gap-1 rounded-md px-2 py-1.5 text-opacity-75"
+        class="bg-base-500 text-base-300 flex max-w-md flex-1 items-center justify-center gap-1 overflow-hidden rounded-md px-2 py-1.5 text-opacity-75"
         :class="{ 'sm:px-4': containerSm }"
       >
         <IconLockClosed />
-        <span class="text-sm">awesome-site.com</span>
+        <span class="overflow-hidden text-ellipsis whitespace-nowrap text-sm"
+          >awesome-site.com</span
+        >
       </div>
 
       <IconHamburgerMenu class="hidden" :class="{ 'sm:block': containerSm }" />

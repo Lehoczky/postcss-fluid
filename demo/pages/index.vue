@@ -1,44 +1,72 @@
 <template>
   <div>
     <main class="mx-auto max-w-5xl px-4 sm:px-10">
+      <div class="my-[fluid(3.5rem,7rem,30rem,64rem)]">
+        <h1>PostCSS Fluid Demo</h1>
+      </div>
+
       <DemoSection :code="typography">
         <template #heading>Fluid Typography</template>
-        <iframe class="h-[23.125rem]" src="/postcss-fluid/example/typography" />
+        <iframe
+          class="h-[23.125rem] max-w-full"
+          src="/postcss-fluid/example/typography"
+        />
       </DemoSection>
 
       <DemoSection :code="growingSquare">
         <template #heading>Width and Height</template>
-        <iframe class="h-[18rem]" src="/postcss-fluid/example/growing" />
+        <iframe
+          class="h-[18rem] max-w-full"
+          src="/postcss-fluid/example/growing"
+        />
       </DemoSection>
 
       <DemoSection :code="paddedBox">
         <template #heading>Padding</template>
-        <iframe class="h-[18rem]" src="/postcss-fluid/example/padding" />
+        <iframe
+          class="h-[18rem] max-w-full"
+          src="/postcss-fluid/example/padding"
+        />
       </DemoSection>
 
       <DemoSection :code="positionedBox">
         <template #heading>Position</template>
-        <iframe class="h-[14rem]" src="/postcss-fluid/example/position" />
+        <iframe
+          class="h-[14rem] max-w-full"
+          src="/postcss-fluid/example/position"
+        />
       </DemoSection>
 
       <DemoSection :code="shrinkingSquare">
         <template #heading>Larger Value on Mobile</template>
-        <iframe class="h-[18rem]" src="/postcss-fluid/example/shrinking" />
+        <iframe
+          class="h-[18rem] max-w-full"
+          src="/postcss-fluid/example/shrinking"
+        />
       </DemoSection>
 
       <DemoSection :code="boxToCircle">
         <template #heading>Border Radius</template>
-        <iframe class="h-[14rem]" src="/postcss-fluid/example/border-radius" />
+        <iframe
+          class="h-[14rem] max-w-full"
+          src="/postcss-fluid/example/border-radius"
+        />
       </DemoSection>
 
       <DemoSection :code="fluidGridGap">
         <template #heading>Gap</template>
-        <iframe class="h-[20rem]" src="/postcss-fluid/example/grid-gap" />
+        <iframe
+          class="h-[20rem] max-w-full"
+          src="/postcss-fluid/example/grid-gap"
+        />
       </DemoSection>
 
       <DemoSection :code="fluidBorder">
         <template #heading>Border</template>
-        <iframe class="h-[14rem]" src="/postcss-fluid/example/border" />
+        <iframe
+          class="h-[14rem] max-w-full"
+          src="/postcss-fluid/example/border"
+        />
       </DemoSection>
 
       <GithubBadge />

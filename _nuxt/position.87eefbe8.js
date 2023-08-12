@@ -1,1 +1,0 @@
-import{f as o,o as s,c as t,p as _,e as a,a as c,_ as p}from"./entry.01a20d8e.js";const n=e=>(_("data-v-45f663de"),e=e(),a(),e),d={class:"relative h-12 w-full"},i=n(()=>c("div",{class:"positioned-box"},null,-1)),l=[i],r=o({__name:"position",setup(e){return(f,u)=>(s(),t("div",d,l))}});const v=p(r,[["__scopeId","data-v-45f663de"]]);export{v as default};

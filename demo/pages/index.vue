@@ -7,66 +7,42 @@
 
       <DemoSection :code="typography">
         <template #heading>Fluid Typography</template>
-        <iframe
-          class="h-[23.125rem] max-w-full"
-          src="/postcss-fluid/example/typography"
-        />
+        <DemoFrame class="h-[23.125rem]" src="/example/typography" />
       </DemoSection>
 
       <DemoSection :code="growingSquare">
         <template #heading>Width and Height</template>
-        <iframe
-          class="h-[18rem] max-w-full"
-          src="/postcss-fluid/example/growing"
-        />
+        <DemoFrame class="h-[18rem]" src="/example/growing" />
       </DemoSection>
 
       <DemoSection :code="paddedBox">
         <template #heading>Padding</template>
-        <iframe
-          class="h-[18rem] max-w-full"
-          src="/postcss-fluid/example/padding"
-        />
+        <DemoFrame class="h-[18rem]" src="/example/padding" />
       </DemoSection>
 
       <DemoSection :code="positionedBox">
         <template #heading>Position</template>
-        <iframe
-          class="h-[14rem] max-w-full"
-          src="/postcss-fluid/example/position"
-        />
+        <DemoFrame class="h-[14rem]" src="/example/position" />
       </DemoSection>
 
       <DemoSection :code="shrinkingSquare">
         <template #heading>Larger Value on Mobile</template>
-        <iframe
-          class="h-[18rem] max-w-full"
-          src="/postcss-fluid/example/shrinking"
-        />
+        <DemoFrame class="h-[18rem]" src="/example/shrinking" />
       </DemoSection>
 
       <DemoSection :code="boxToCircle">
         <template #heading>Border Radius</template>
-        <iframe
-          class="h-[14rem] max-w-full"
-          src="/postcss-fluid/example/border-radius"
-        />
+        <DemoFrame class="h-[14rem]" src="/example/border-radius" />
       </DemoSection>
 
       <DemoSection :code="fluidGridGap">
         <template #heading>Gap</template>
-        <iframe
-          class="h-[20rem] max-w-full"
-          src="/postcss-fluid/example/grid-gap"
-        />
+        <DemoFrame class="h-[20rem]" src="/example/grid-gap" />
       </DemoSection>
 
       <DemoSection :code="fluidBorder">
         <template #heading>Border</template>
-        <iframe
-          class="h-[14rem] max-w-full"
-          src="/postcss-fluid/example/border"
-        />
+        <DemoFrame class="h-[14rem]" src="/example/border" />
       </DemoSection>
 
       <GithubBadge />

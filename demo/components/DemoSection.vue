@@ -10,9 +10,7 @@
       <slot />
     </ResizableWindow>
 
-    <div>
-      <CodeBlock :code="code" />
-    </div>
+    <CodeBlock :code="code" />
   </section>
 </template>
 

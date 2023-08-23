@@ -22,11 +22,17 @@
 <script setup lang="ts">
 const MAX_WIDTH_ON_DESKTOP = 896
 
+const emit = defineEmits<{
+  (event: "widthChange", value: number): void
+}>()
+
 const root = ref<HTMLElement>()
 const { width, height } = useElementSize(root, {
   width: MAX_WIDTH_ON_DESKTOP,
   height: 0,
 })
+
+watch(width, (value) => emit("widthChange", value))
 
 // Could use container queries, but browser support is not that good yet
 const containerSm = computed(() => width.value >= 600)

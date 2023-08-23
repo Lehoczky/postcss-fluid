@@ -6,9 +6,14 @@
       <slot name="heading" />
     </h2>
 
-    <ResizableWindow class="mb-8">
-      <slot />
-    </ResizableWindow>
+    <div class="relative mb-12">
+      <ResizableWindow>
+        <slot />
+      </ResizableWindow>
+
+      <WindowWidthIndicator :position="480" />
+      <WindowWidthIndicator :position="720" />
+    </div>
 
     <CodeBlock :code="code" />
   </section>

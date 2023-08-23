@@ -31,6 +31,9 @@ devDependencies:
   eslint-define-config:
     specifier: ^1.22.0
     version: 1.22.0
+  eslint-plugin-only-warn:
+    specifier: ^1.1.0
+    version: 1.1.0
   eslint-plugin-simple-import-sort:
     specifier: ^10.0.0
     version: 10.0.0(eslint@8.46.0)
@@ -1089,6 +1092,11 @@ packages:
   /eslint-define-config@1.22.0:
     resolution: {integrity: sha512-pckNJppFwC4AX+AGK63aa4sX5BluPwWwHES3fq/ER0jDR2U2czwlngg38B4EQ2ibvofufc+R5QfmdPKI6+74vQ==}
     engines: {node: ^16.13.0 || >=18.0.0, npm: '>=7.0.0', pnpm: '>= 8.6.0'}
+    dev: true
+
+  /eslint-plugin-only-warn@1.1.0:
+    resolution: {integrity: sha512-2tktqUAT+Q3hCAU0iSf4xAN1k9zOpjK5WO8104mB0rT/dGhOa09582HN5HlbxNbPRZ0THV7nLGvzugcNOSjzfA==}
+    engines: {node: '>=6'}
     dev: true
 
   /eslint-plugin-simple-import-sort@10.0.0(eslint@8.46.0):

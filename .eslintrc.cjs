@@ -6,7 +6,7 @@ module.exports = defineConfig({
     node: true,
     es6: true,
   },
-  plugins: ["@typescript-eslint", "simple-import-sort"],
+  plugins: ["@typescript-eslint", "simple-import-sort", "only-warn"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",

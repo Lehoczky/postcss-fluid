@@ -1,4 +1,5 @@
-import { Ref, ref } from "vue"
+import type { Ref } from "vue"
+import { ref } from "vue"
 
 export const useShiki = async (code: Ref<string>, hlOptions = {}) => {
   const codeToHtml = ref(() => code.value)

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-throw-literal */
 import type { Plugin } from "postcss"
 import valueParser from "postcss-value-parser"
 
@@ -6,7 +7,8 @@ import {
   hasFluidFunction,
   isFluidFunction,
 } from "./function"
-import { Options, parseOptions } from "./options"
+import type { Options } from "./options"
+import { parseOptions } from "./options"
 
 const pluginCreator = (opts: Options = {}): Plugin => {
   const options = parseOptions(opts)

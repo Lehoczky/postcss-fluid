@@ -1,4 +1,4 @@
-import { WatchCallback, WatchOptions, WatchSource } from "vue"
+import type { WatchCallback, WatchOptions, WatchSource } from "vue"
 
 export function watchWithFirstUpdateSkipped<T>(
   source: WatchSource<T>,

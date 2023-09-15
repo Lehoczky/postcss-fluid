@@ -5,7 +5,7 @@ import valueParser, {
 } from "postcss-value-parser"
 
 import { DimensionUnitsNotMatchError } from "./errors"
-import { ParsedOptions } from "./options"
+import type { ParsedOptions } from "./options"
 import {
   checkWhetherUnitIsAllowed,
   isBoolean,

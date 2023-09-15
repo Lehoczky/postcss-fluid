@@ -1,4 +1,4 @@
-import { Dimension } from "postcss-value-parser"
+import type { Dimension } from "postcss-value-parser"
 import { describe, expect, it } from "vitest"
 
 import {

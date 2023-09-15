@@ -1,7 +1,7 @@
+import config from "@lehoczky/prettier-config"
+
 /** @type {import("prettier").Options} */
 export default {
-  endOfLine: "auto",
-  printWidth: 80,
-  semi: false,
+  ...config,
   plugins: ["prettier-plugin-tailwindcss"],
 }

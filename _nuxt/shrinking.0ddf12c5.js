@@ -1,0 +1,1 @@
+import{n as e,o as n,c as s,_}from"./entry.37fe15bd.js";const t={class:"shrinking-square"},o=e({__name:"shrinking",setup(c){return(a,r)=>(n(),s("div",t))}});const p=_(o,[["__scopeId","data-v-4976320b"]]);export{p as default};

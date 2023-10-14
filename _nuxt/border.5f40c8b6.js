@@ -1,1 +1,0 @@
-import{f as e,o as _,c as o,_ as s}from"./entry.767f606a.js";const t={class:"fluid-border"},r=e({__name:"border",setup(c){return(n,a)=>(_(),o("div",t))}});const p=s(r,[["__scopeId","data-v-ef6252b1"]]);export{p as default};

@@ -2,9 +2,13 @@ name: Test
 
 on:
   push:
+    paths-ignore:
+      - "demo/**"
     branches:
       - master
   pull_request:
+    paths-ignore:
+      - "demo/**"
     branches:
       - master
 

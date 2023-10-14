@@ -2,6 +2,8 @@ name: Publish
 
 on:
   push:
+    paths-ignore:
+      - "demo/**"
     branches:
       - master
 

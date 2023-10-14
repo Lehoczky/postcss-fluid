@@ -16,8 +16,8 @@ definePageMeta({
 
 <style scoped>
 .typography {
-  font-size: fluid(18px, 26px, 480px, 720px);
+  font-size: fluid(16px, 28px, 480px, 720px);
   line-height: fluid(26px, 38px, 480px, 720px);
-  letter-spacing: fluid(0, 0.5px, 480px, 720px);
+  letter-spacing: fluid(0, 0.6px, 480px, 720px);
 }
 </style>

@@ -57,44 +57,14 @@
 </template>
 
 <script lang="ts" setup>
-const typography = ref(`
-div {
-  font-size: fluid(18px, 26px, 480px, 720px);
-  line-height: fluid(26px, 38px, 480px, 720px);
-  letter-spacing: fluid(0, 0.5px, 480px, 720px);
-}`)
-const growingSquare = ref(`
-div {
-  width: fluid(40px, 200px, 480px, 720px);
-  height: fluid(40px, 200px, 480px, 720px);
-}`)
-const paddedBox = ref(`
-div {
-  padding: fluid(4px, 40px, 480px, 720px);
-}`)
-const positionedBox = ref(`
-div {
-  position: absolute;
-  top: fluid(0px, 80px, 480px, 720px);
-  left: fluid(0px, 80px, 480px, 720px);
-}`)
-const shrinkingSquare = ref(`
-div {
-  width: fluid(200px, 40px, 480px, 720px);
-  height: fluid(200px, 40px, 480px, 720px);
-}`)
-const boxToCircle = ref(`
-div {
-  border-radius: fluid(0, 50px, 480px, 720px);
-}`)
-const fluidGridGap = ref(`
-div {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: fluid(0, 30px, 480px, 720px);
-}`)
-const fluidBorder = ref(`
-div {
-  border: fluid(10px, 20px, 480px, 720px) solid black;
-}`)
+import {
+  boxToCircle,
+  fluidBorder,
+  fluidGridGap,
+  growingSquare,
+  paddedBox,
+  positionedBox,
+  shrinkingSquare,
+  typography,
+} from "@/code-examples"
 </script>

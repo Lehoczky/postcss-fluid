@@ -12,7 +12,7 @@ definePageMeta({
 .fluid-border {
   width: 60px;
   height: 60px;
-  border: fluid(10px, 20px, 480px, 720px) solid black;
+  border: fluid(10px, 22px, 480px, 720px) solid black;
   @apply bg-box;
 }
 </style>

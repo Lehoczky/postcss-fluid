@@ -10,8 +10,8 @@ definePageMeta({
 
 <style scoped>
 .shrinking-square {
-  width: fluid(200px, 40px, 480px, 720px);
-  height: fluid(200px, 40px, 480px, 720px);
+  width: fluid(200px, 50px, 480px, 720px);
+  height: fluid(200px, 50px, 480px, 720px);
   @apply bg-box;
 }
 </style>

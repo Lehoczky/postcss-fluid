@@ -10,8 +10,8 @@ definePageMeta({
 
 <style scoped>
 .growing-square {
-  width: fluid(40px, 200px, 480px, 720px);
-  height: fluid(40px, 200px, 480px, 720px);
+  width: fluid(50px, 200px, 480px, 720px);
+  height: fluid(50px, 200px, 480px, 720px);
 
   @apply bg-box;
 }

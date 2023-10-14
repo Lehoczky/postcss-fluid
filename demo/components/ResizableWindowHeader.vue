@@ -13,7 +13,7 @@
       class="bg-base-500 text-base-300 flex max-w-md flex-1 items-center justify-center gap-1 overflow-hidden rounded-md px-2 py-1.5 text-opacity-75"
       :class="{ 'sm:px-4': sm }"
     >
-      <IconLockClosed />
+      <IconLockClosed class="shrink-0" />
       <span class="overflow-hidden text-ellipsis whitespace-nowrap text-sm"
         >awesome-site.com</span
       >

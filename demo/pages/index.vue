@@ -1,8 +1,15 @@
 <template>
   <div>
     <main class="mx-auto max-w-5xl px-4 sm:px-10">
-      <div class="my-[fluid(3.5rem,7rem,30rem,64rem)]">
+      <div
+        class="mb-[fluid(2rem,5rem,30rem,64rem)] mt-[fluid(3.5rem,7rem,30rem,64rem)]"
+      >
         <h1>PostCSS Fluid Demo</h1>
+        <div class="mt-4 max-w-3xl text-lg">
+          You can find various examples in this page. By resizing the windows
+          below, you will be able to see the fluid effect this library creates.
+        </div>
+        <ScreenWidthWarning class="mt-3 md:hidden" />
       </div>
 
       <DemoSection :code="typography">

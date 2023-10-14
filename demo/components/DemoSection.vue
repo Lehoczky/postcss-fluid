@@ -10,9 +10,6 @@
       <ResizableWindow @width-change="frameWidth = $event">
         <slot />
       </ResizableWindow>
-
-      <WindowWidthIndicator :position="480" :active="frameWidth < 480" />
-      <WindowWidthIndicator :position="720" :active="frameWidth < 720" />
     </div>
 
     <CodeBlock :code="code" />

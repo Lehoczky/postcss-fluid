@@ -6,6 +6,7 @@
     "esbenp.prettier-vscode",
     "zixuanchen.vitest-explorer",
     "stylelint.vscode-stylelint",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "bierner.comment-tagged-templates"
   ]
 }

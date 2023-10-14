@@ -2,7 +2,11 @@ name: Lint
 
 on:
   push:
+    branches:
+      - master
   pull_request:
+    branches:
+      - master
 
 jobs:
   lint:
@@ -21,9 +25,6 @@ jobs:
         with:
           node-version: 20
           cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install
 
       - name: Install dependencies
         run: pnpm install

@@ -7,6 +7,7 @@ on:
       - .github/workflows/demo.yml
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -24,7 +25,13 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install library dependencies
+        run: pnpm install
+
+      - name: Build library
+        run: pnpm build
+
+      - name: Install demo dependencies
         run: pnpm install
         working-directory: demo
 

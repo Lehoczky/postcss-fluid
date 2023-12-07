@@ -1,1 +1,0 @@
-import{n as e,o as _,c as o,_ as s}from"./entry.37fe15bd.js";const t={class:"box-to-circle"},c=e({__name:"border-radius",setup(r){return(a,n)=>(_(),o("div",t))}});const p=s(c,[["__scopeId","data-v-66950177"]]);export{p as default};

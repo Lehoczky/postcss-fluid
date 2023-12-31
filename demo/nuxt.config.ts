@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         },
       ],
       bodyAttrs: {
-        class: "bg-base-800 font-poppins text-base-300",
+        class: "bg-base-800 font-sans text-base-300",
       },
     },
   },
@@ -40,19 +40,10 @@ export default defineNuxtConfig({
       "@lehoczky/postcss-fluid": {},
     },
   },
-  modules: ["@vueuse/nuxt", "@nuxtjs/google-fonts"],
+  modules: ["@vueuse/nuxt"],
   routeRules: {
     "/example/**": {
       experimentalNoScripts: true,
-    },
-  },
-  googleFonts: {
-    preload: true,
-    download: false,
-    families: {
-      Poppins: {
-        wght: [400, 500],
-      },
     },
   },
   nitro: {

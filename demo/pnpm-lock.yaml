@@ -13,9 +13,6 @@ devDependencies:
   '@lehoczky/postcss-fluid':
     specifier: link:..
     version: link:..
-  '@nuxtjs/google-fonts':
-    specifier: ^3.1.3
-    version: 3.1.3
   '@vueuse/core':
     specifier: ^10.7.1
     version: 10.7.1(vue@3.4.3)
@@ -1431,17 +1428,6 @@ packages:
       - vls
       - vti
       - vue-tsc
-    dev: true
-
-  /@nuxtjs/google-fonts@3.1.3:
-    resolution: {integrity: sha512-gHwstHXQKd/r9O2WnQR4UJbi7Rfb9No1/gF4gqP+y18h1DAAZUOYPBF5EAPGjZKgDOW2XbZHP8Rw3oSDTpIT1A==}
-    dependencies:
-      '@nuxt/kit': 3.9.0
-      google-fonts-helper: 3.4.1
-      pathe: 1.1.1
-    transitivePeerDependencies:
-      - rollup
-      - supports-color
     dev: true
 
   /@parcel/watcher-android-arm64@2.3.0:
@@ -3463,15 +3449,6 @@ packages:
       path-type: 5.0.0
       slash: 5.1.0
       unicorn-magic: 0.1.0
-    dev: true
-
-  /google-fonts-helper@3.4.1:
-    resolution: {integrity: sha512-unq9c1NF771916DrVR2MTpMJ5iHiMSjMBApErjhWT1FZIE+7x+Qik+w6cYi5jw/KtHELz+tyGAKgQetTU9wrlA==}
-    dependencies:
-      deepmerge: 4.3.1
-      hookable: 5.5.3
-      ofetch: 1.3.3
-      ufo: 1.3.2
     dev: true
 
   /graceful-fs@4.2.11:

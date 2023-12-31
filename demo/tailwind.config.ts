@@ -10,9 +10,6 @@ export default {
     "./app.vue",
   ],
   theme: {
-    fontFamily: {
-      poppins: ["Poppins", "sans-serif"],
-    },
     extend: {
       colors: {
         base: {

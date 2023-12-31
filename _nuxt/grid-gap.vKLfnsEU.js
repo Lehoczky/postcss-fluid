@@ -1,0 +1,1 @@
+import{n as o,o as a,c as d,p as t,e as c,a as e,_}from"./entry.ZrKfYZh7.js";const i=s=>(t("data-v-64654447"),s=s(),c(),s),p={class:"flex"},n=i(()=>e("div",{class:"fluid-grid-gap"},[e("div"),e("div"),e("div"),e("div"),e("div"),e("div")],-1)),r=[n],v=o({__name:"grid-gap",setup(s){return(l,f)=>(a(),d("div",p,r))}}),m=_(v,[["__scopeId","data-v-64654447"]]);export{m as default};

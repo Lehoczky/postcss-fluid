@@ -18,5 +18,5 @@ const props = defineProps({
 })
 
 const trimmedCode = computed(() => props.code.trim())
-const highlightedCode = await useShiki(trimmedCode, { lang: "css" })
+const highlightedCode = await useShikiji(trimmedCode)
 </script>

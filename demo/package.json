@@ -4,7 +4,6 @@
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
-    "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
@@ -21,6 +20,6 @@
     "typescript": "~5.2.2"
   },
   "dependencies": {
-    "shiki-es": "^0.14.0"
+    "shikiji": "^0.9.15"
   }
 }

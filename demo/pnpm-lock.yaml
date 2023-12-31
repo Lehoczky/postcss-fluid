@@ -5,9 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  shiki-es:
-    specifier: ^0.14.0
-    version: 0.14.0
+  shikiji:
+    specifier: ^0.9.15
+    version: 0.9.15
 
 devDependencies:
   '@lehoczky/postcss-fluid':
@@ -5869,8 +5869,14 @@ packages:
     resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
     dev: true
 
-  /shiki-es@0.14.0:
-    resolution: {integrity: sha512-e+/aueHx0YeIEut6RXC6K8gSf0PykwZiHD7q7AHtpTW8Kd8TpFUIWqTwhAnrGjOyOMyrwv+syr5WPagMpDpVYQ==}
+  /shikiji-core@0.9.15:
+    resolution: {integrity: sha512-7hqIcUKS15OMs/61Qp2GvO1fSajBB36bDqi8vexIg5kp80V6v6SGtBrlq+nLlo7erMG2d1kvIuTIq1bwKI6fEg==}
+    dev: false
+
+  /shikiji@0.9.15:
+    resolution: {integrity: sha512-+inN4cN+nY7b0uCPOiqFHAk+cn2DEdM3AIQgPhAV7QKqhww/o7OGS5xvLh3SNnjke9C/HispALqGOQGYHVq7KQ==}
+    dependencies:
+      shikiji-core: 0.9.15
     dev: false
 
   /signal-exit@3.0.7:

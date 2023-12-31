@@ -6,5 +6,5 @@
   },
   "css.validate": false,
   "stylelint.validate": ["css", "vue"],
-  "cSpell.words": ["octo", "octocat", "postcss", "Shiki", "vueuse"]
+  "cSpell.words": ["octo", "octocat", "postcss", "Shiki", "shikiji", "vueuse"]
 }

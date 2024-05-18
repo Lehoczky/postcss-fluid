@@ -5,7 +5,7 @@ export const useShikiji = async (code: Ref<string>) => {
   const codeToHtml = ref(() => code.value)
 
   const init = async () => {
-    const { getHighlighter } = await import("shikiji")
+    const { getHighlighter } = await import("shiki")
     const highlighter = await getHighlighter({
       langs: ["css"],
       themes: ["one-dark-pro"],

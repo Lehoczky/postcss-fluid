@@ -26,9 +26,8 @@
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^1.6.0",
-    "eslint-define-config": "^1.24.1",
     "postcss": "^8.4.38",
-    "typescript": "~5.2.2",
+    "typescript": "~5.4.5",
     "vitest": "^1.6.0"
   },
   "keywords": [

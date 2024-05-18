@@ -1,0 +1,53 @@
+{
+  "name": "@lehoczky/postcss-fluid",
+  "version": "1.0.3",
+  "private": false,
+  "description": "PostCSS plugin that makes it easier to work with fluid css values.",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "peerDependencies": {
+    "postcss": "^8.3.0"
+  },
+  "dependencies": {
+    "postcss-value-parser": "^4.2.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^1.6.0",
+    "eslint-define-config": "^1.24.1",
+    "postcss": "^8.4.38",
+    "typescript": "~5.2.2",
+    "vitest": "^1.6.0"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "postcss-fluid"
+  ],
+  "author": {
+    "name": "Zoltan Lehoczky",
+    "email": "ifjlehoczkyzoltan@gmail.com",
+    "url": "https://github.com/Lehoczky"
+  },
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Lehoczky/postcss-fluid.git",
+    "type": "git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

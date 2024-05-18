@@ -1,32 +1,11 @@
 {
-  "name": "@lehoczky/postcss-fluid",
-  "version": "1.0.3",
-  "private": false,
-  "description": "PostCSS plugin that makes it easier to work with fluid css values.",
+  "name": "@lehoczky/postcss-fluid-monorepo",
+  "private": true,
   "scripts": {
-    "build": "tsc",
     "lint": "npm run eslint:fix && npm run styles:check && npm run format:write",
     "eslint:fix": "eslint . --ext .ts,js,vue --max-warnings=0 --fix",
     "styles:check": "stylelint \"./**/*.{css,vue}\" --ignore-path=.gitignore",
-    "format:write": "prettier \"./**\" --write --ignore-unknown",
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
-  },
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ],
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "peerDependencies": {
-    "postcss": "^8.3.0"
-  },
-  "dependencies": {
-    "postcss-value-parser": "^4.2.0"
+    "format:write": "prettier \"./**\" --write --ignore-unknown"
   },
   "devDependencies": {
     "@lehoczky/eslint-config-vue": "^1.2.5",
@@ -45,24 +24,5 @@
     "typescript": "~5.2.2",
     "vitest": "^1.6.0"
   },
-  "keywords": [
-    "postcss",
-    "css",
-    "postcss-plugin",
-    "postcss-fluid"
-  ],
-  "author": {
-    "name": "Zoltan Lehoczky",
-    "email": "ifjlehoczkyzoltan@gmail.com",
-    "url": "https://github.com/Lehoczky"
-  },
-  "license": "MIT",
-  "repository": {
-    "url": "https://github.com/Lehoczky/postcss-fluid.git",
-    "type": "git"
-  },
-  "packageManager": "pnpm@8.13.1",
-  "publishConfig": {
-    "access": "public"
-  }
+  "packageManager": "pnpm@9.1.1"
 }

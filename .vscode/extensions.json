@@ -4,9 +4,9 @@
     "dbaeumer.vscode-eslint",
     "davidanson.vscode-markdownlint",
     "esbenp.prettier-vscode",
-    "zixuanchen.vitest-explorer",
     "stylelint.vscode-stylelint",
     "streetsidesoftware.code-spell-checker",
-    "bierner.comment-tagged-templates"
+    "bierner.comment-tagged-templates",
+    "vitest.explorer"
   ]
 }

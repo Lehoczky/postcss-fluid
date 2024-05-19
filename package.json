@@ -11,7 +11,6 @@
     "@lehoczky/eslint-config-vue": "^1.2.5",
     "@lehoczky/prettier-config": "^1.1.6",
     "@types/node": "^20.12.12",
-    "@vitest/coverage-v8": "^1.6.0",
     "eslint": "^8.57.0",
     "eslint-define-config": "^2.1.0",
     "postcss": "^8.4.38",
@@ -22,7 +21,6 @@
     "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard": "^36.0.0",
     "typescript": "~5.4.5",
-    "vitest": "^1.6.0",
     "nx": "19.0.4"
   },
   "packageManager": "pnpm@9.1.1"

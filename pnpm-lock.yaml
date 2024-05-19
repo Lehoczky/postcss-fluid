@@ -17,9 +17,6 @@ importers:
       '@types/node':
         specifier: ^20.12.12
         version: 20.12.12
-      '@vitest/coverage-v8':
-        specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.12.12)(terser@5.31.0))
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -53,9 +50,6 @@ importers:
       typescript:
         specifier: ~5.4.5
         version: 5.4.5
-      vitest:
-        specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.12.12)(terser@5.31.0)
 
   packages/demo:
     dependencies:

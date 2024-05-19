@@ -1,1 +1,0 @@
-import{_ as o,c as s,C as t,o as r}from"./entry.2atfwHO_.js";const c={},n={class:"bg-base-600 h-screen overflow-auto px-6 py-8"};function a(e,_){return r(),s("div",n,[t(e.$slots,"default")])}const l=o(c,[["render",a]]);export{l as default};

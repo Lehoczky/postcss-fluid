@@ -40,12 +40,11 @@ jobs:
         with:
           main-branch-name: master
 
-      - name: List affected packages
+      - name: Check for Affected Projects
+        uses: 2coo/action-nx-affected@v1
         id: affected-packages
-        run: |
-          affected=$(npx nx show projects --affected)
-          echo ${affected}
-          affected >> $GITHUB_OUTPUT
+        with:
+          base: master
 
       - name: Check formatting 🎨
         run: npx nx format:check
@@ -58,7 +57,7 @@ jobs:
         run: pnpm -F @lehoczky/postcss-fluid publish
 
       - name: Deploy demo page 🚀
-        if: github.ref == 'refs/heads/master' && contains(steps.affected-packages.outputs, 'demo')
+        if: github.ref == 'refs/heads/master' && contains(steps.affected-packages.outputs.affected, 'demo')
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

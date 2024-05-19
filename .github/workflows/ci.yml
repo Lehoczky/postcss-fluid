@@ -37,6 +37,7 @@ jobs:
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v4
+        id: nx-sha
         with:
           main-branch-name: master
 
@@ -44,7 +45,8 @@ jobs:
         uses: 2coo/action-nx-affected@v1
         id: affected-packages
         with:
-          base: master
+          base: ${{steps.nx-sha.outputs.base}}
+          head: ${{steps.nx-sha.outputs.head}}
 
       - name: Check formatting 🎨
         run: npx nx format:check

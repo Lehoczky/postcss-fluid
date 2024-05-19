@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-base-700 my-8 rounded-xl bg-opacity-40 p-4 sm:my-12 sm:p-6"
+    class="my-8 rounded-xl bg-base-700 bg-opacity-40 p-4 sm:my-12 sm:p-6"
   >
     <h2>
       <slot name="heading" />

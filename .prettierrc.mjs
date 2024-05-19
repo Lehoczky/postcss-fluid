@@ -4,4 +4,5 @@ import config from "@lehoczky/prettier-config"
 export default {
   ...config,
   plugins: ["prettier-plugin-tailwindcss"],
+  tailwindConfig: "./packages/demo/tailwind.config.ts",
 }

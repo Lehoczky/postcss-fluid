@@ -1,5 +1,5 @@
 <template>
-  <div class="text-base-700 bg-white bg-opacity-60 p-1 text-xs leading-none">
+  <div class="bg-white bg-opacity-60 p-1 text-xs leading-none text-base-700">
     {{ dimension }}
   </div>
 </template>

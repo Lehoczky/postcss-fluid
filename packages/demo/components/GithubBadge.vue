@@ -4,7 +4,7 @@
       width="80"
       height="80"
       viewBox="0 0 250 250"
-      class="fill-base-700 text-base-300 scale-65 absolute right-0 top-0 origin-top-right transform border-none xl:scale-90"
+      class="absolute right-0 top-0 origin-top-right scale-65 transform border-none fill-base-700 text-base-300 xl:scale-90"
       aria-hidden="true"
     >
       <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z" />

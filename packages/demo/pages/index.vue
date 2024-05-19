@@ -55,7 +55,7 @@
       <GithubBadge />
     </main>
 
-    <div class="bg-base-700 flex justify-center p-3 md:hidden">
+    <div class="flex justify-center bg-base-700 p-3 md:hidden">
       <GithubLink>
         <IconGithub />
       </GithubLink>

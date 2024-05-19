@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Git repository ⏬
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Set up Node.js 💿
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies 💤
+        run: pnpm install
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v4
+        with:
+          main-branch-name: master
+
+      - name: List affected packages
+        id: affected-packages
+        run: |
+          affected=$(npx nx show projects --affected)
+          echo ${affected}
+          affected >> $GITHUB_OUTPUT
+
+      - name: Check formatting 🎨
+        run: npx nx format:check
+
+      - name: Run lint, test, build 👷‍♀️
+        run: npx nx affected -t lint test build
+
+      - name: Release new version 🎉
+        if: github.ref == 'refs/heads/master'
+        run: pnpm -F @lehoczky/postcss-fluid publish
+
+      - name: Deploy demo page 🚀
+        if: github.ref == 'refs/heads/master' && contains(steps.affected-packages.outputs, 'demo')
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./packages/demo/dist

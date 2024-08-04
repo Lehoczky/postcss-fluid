@@ -7,3 +7,4 @@ coverage/
 .idea/
 
 .nx/cache
+.nx/workspace-data

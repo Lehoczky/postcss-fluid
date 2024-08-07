@@ -1,0 +1,90 @@
+---
+import MainLayout from "../layouts/MainLayout.astro"
+import GitHubBadge from "../components/GitHubBadge.astro"
+import GitHubLink from "../components/GitHubLink.astro"
+import IconGitHub from "../components/IconGitHub.astro"
+import ScreenWidthWarning from "../components/ScreenWidthWarning.astro"
+
+import boxToCircleExample from "../assets/box-to-circle.example.css?raw"
+import fluidBorderExample from "../assets/fluid-border.example.css?raw"
+import fluidGridGapExample from "../assets/fluid-grid-gap.example.css?raw"
+import growingSquareExample from "../assets/growing-square.example.css?raw"
+import paddedBoxExample from "../assets/padded-box.example.css?raw"
+import positionedBoxExample from "../assets/positioned-box.example.css?raw"
+import shrinkingSquareExample from "../assets/shrinking-square.example.css?raw"
+import typographyExample from "../assets/typography.example.css?raw"
+import DemoSection from "../components/DemoSection.astro"
+---
+
+<MainLayout title="Welcome to Astro.">
+  <div>
+    <main class="mx-auto max-w-5xl px-4 sm:px-10">
+      <div
+        class="mb-[fluid(2rem,5rem,30rem,64rem)] mt-[fluid(3.5rem,7rem,30rem,64rem)]"
+      >
+        <h1>PostCSS Fluid Demo</h1>
+        <div class="mt-4 max-w-3xl text-lg">
+          You can find various examples in this page. By resizing the windows
+          below, you will be able to see the fluid effect this library creates.
+        </div>
+        <ScreenWidthWarning class="mt-3 md:hidden" />
+      </div>
+
+      <DemoSection code={typographyExample}>
+        <Fragment slot={"heading"}>Fluid Typography</Fragment>
+        <iframe class="h-[23.125rem] max-w-full" src="./examples/typography"
+        ></iframe>
+      </DemoSection>
+
+      <DemoSection code={growingSquareExample}>
+        <Fragment slot={"heading"}>Width and Height</Fragment>
+        <iframe class="h-[18rem] max-w-full" src="./examples/growing-square"
+        ></iframe>
+      </DemoSection>
+
+      <DemoSection code={paddedBoxExample}>
+        <Fragment slot={"heading"}>Padding</Fragment>
+        <iframe class="h-[18rem] max-w-full" src="./examples/padded-box"
+        ></iframe>
+      </DemoSection>
+
+      <DemoSection code={positionedBoxExample}>
+        <Fragment slot={"heading"}>Position</Fragment>
+        <iframe class="h-[14rem] max-w-full" src="./examples/positioned-box"
+        ></iframe>
+      </DemoSection>
+
+      <DemoSection code={shrinkingSquareExample}>
+        <Fragment slot={"heading"}>Larger Value on Mobile</Fragment>
+        <iframe class="h-[18rem] max-w-full" src="./examples/shrinking-square"
+        ></iframe>
+      </DemoSection>
+
+      <DemoSection code={boxToCircleExample}>
+        <Fragment slot={"heading"}>Border Radius</Fragment>
+        <iframe class="h-[14rem] max-w-full" src="./examples/box-to-circle"
+        ></iframe>
+      </DemoSection>
+
+      <DemoSection code={fluidGridGapExample}>
+        <Fragment slot={"heading"}>Gap</Fragment>
+        <iframe class="h-[20rem] max-w-full" src="./examples/fluid-grid-gap"
+        ></iframe>
+      </DemoSection>
+
+      <DemoSection code={fluidBorderExample}>
+        <Fragment slot={"heading"}>Border</Fragment>
+        <iframe class="h-[14rem] max-w-full" src="./examples/fluid-border"
+        ></iframe>
+      </DemoSection>
+
+      <GitHubBadge />
+    </main>
+
+    <div class="flex justify-center bg-base-700 p-3 md:hidden">
+      <GitHubLink>
+        <IconGitHub />
+      </GitHubLink>
+    </div>
+  </div>
+</MainLayout>

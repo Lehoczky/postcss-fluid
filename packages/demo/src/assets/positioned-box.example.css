@@ -1,0 +1,13 @@
+div {
+  position: absolute;
+  top: fluid(0px, 60px, 480px, 720px);
+  left: fluid(0px, 60px, 480px, 720px);
+}
+
+/* Compiled output:
+div {
+  position: absolute;
+  top: clamp(0px, -120px + 25vw, 60px);
+  left: clamp(0px, -120px + 25vw, 60px);
+}
+*/

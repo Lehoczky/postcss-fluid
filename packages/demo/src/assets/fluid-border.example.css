@@ -1,0 +1,9 @@
+div {
+  border: fluid(10px, 22px, 480px, 720px) solid black;
+}
+
+/* Compiled output:
+div {
+  border: clamp(10px, -14px + 5vw, 22px) solid black;
+}
+*/

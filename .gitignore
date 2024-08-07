@@ -8,3 +8,5 @@ coverage/
 
 .nx/cache
 .nx/workspace-data
+
+demo.old

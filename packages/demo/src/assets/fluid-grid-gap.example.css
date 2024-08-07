@@ -1,0 +1,13 @@
+div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: fluid(0, 30px, 480px, 720px);
+}
+
+/* Compiled output:
+div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0px, -60px + 12.5vw, 30px);
+}
+*/

@@ -1,0 +1,13 @@
+---
+import ResizableWindowHeader from "./ResizableWindowHeader.astro"
+---
+
+<div
+  class="max-w-custom flex min-w-[10rem] max-w-[896px] resize-x flex-col overflow-x-auto rounded-xl sm:overflow-hidden"
+>
+  <ResizableWindowHeader />
+
+  <div class="relative grid place-items-stretch">
+    <slot />
+  </div>
+</div>

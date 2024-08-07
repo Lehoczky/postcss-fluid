@@ -1,0 +1,18 @@
+---
+import "../../assets/box-to-circle.example.css"
+import ExampleLayout from "../../layouts/ExampleLayout.astro"
+---
+
+<ExampleLayout>
+  <div class="relative h-12 w-full">
+    <div class="positioned-box"></div>
+  </div>
+</ExampleLayout>
+
+<style>
+  div {
+    width: 100px;
+    height: 100px;
+    @apply bg-box;
+  }
+</style>

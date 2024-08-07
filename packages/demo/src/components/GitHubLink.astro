@@ -1,0 +1,18 @@
+---
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "../utils/cn"
+
+export interface Props extends HTMLAttributes<"a"> {}
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<a
+  class={cn(className)}
+  href="https://github.com/Lehoczky/postcss-fluid"
+  aria-label="View source on GitHub"
+  {...attrs}
+>
+  <slot />
+</a>

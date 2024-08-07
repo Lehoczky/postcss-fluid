@@ -1,26 +1,21 @@
 {
   "name": "demo",
-  "private": true,
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "nuxt dev",
-    "build": "nuxt build",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@lehoczky/postcss-fluid": "workspace:*",
-    "@vueuse/core": "^10.9.0",
-    "@vueuse/math": "^10.9.0",
-    "@vueuse/nuxt": "^10.9.0",
-    "autoprefixer": "^10.4.19",
-    "nuxt": "3.11.2",
-    "postcss": "^8.4.38",
-    "postcss-preset-env": "^9.5.13",
-    "tailwindcss": "^3.4.3",
-    "typescript": "~5.4.5",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "shiki": "^1.6.0"
+    "@astrojs/check": "^0.9.2",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.13.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.5.4"
   }
 }

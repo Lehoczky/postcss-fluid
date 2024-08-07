@@ -6,7 +6,7 @@
     "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
     "streetsidesoftware.code-spell-checker",
-    "bierner.comment-tagged-templates",
+    "astro-build.astro-vscode",
     "vitest.explorer"
   ]
 }

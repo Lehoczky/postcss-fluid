@@ -1,0 +1,31 @@
+---
+import type { HTMLAttributes } from "astro/types"
+import { Code } from "astro:components"
+import ResizableWindow from "./ResizableWindow.astro"
+
+import { cn } from "../utils/cn"
+
+export interface Props extends HTMLAttributes<"section"> {
+  code: string
+}
+
+const { class: className, code, ...attrs } = Astro.props
+---
+
+<section
+  class={cn(
+    "my-8 rounded-xl bg-base-700 bg-opacity-40 p-4 sm:my-12 sm:p-6",
+    className,
+  )}
+  {...attrs}
+>
+  <h2><slot name="heading" /></h2>
+
+  <div class="relative mb-12">
+    <ResizableWindow>
+      <slot />
+    </ResizableWindow>
+  </div>
+
+  <Code code={code} theme={"one-dark-pro"} lang={"css"} />
+</section>

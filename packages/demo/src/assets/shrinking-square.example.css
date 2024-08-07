@@ -1,0 +1,11 @@
+div {
+  width: fluid(200px, 50px, 480px, 720px);
+  height: fluid(200px, 50px, 480px, 720px);
+}
+
+/* Compiled output:
+div {
+  width: clamp(50px, 500px + -62.5vw, 200px);
+  height: clamp(50px, 500px + -62.5vw, 200px);
+}
+*/

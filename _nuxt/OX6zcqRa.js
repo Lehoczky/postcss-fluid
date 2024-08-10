@@ -1,1 +1,0 @@
-import{n as e,o as s,c as t,p as c,e as a,a as _,_ as p}from"./Cs-VwS7i.js";const n=o=>(c("data-v-877413cb"),o=o(),a(),o),i={class:"relative h-12 w-full"},d=n(()=>_("div",{class:"positioned-box"},null,-1)),r=[d],l=e({__name:"position",setup(o){return(h,u)=>(s(),t("div",i,r))}}),m=p(l,[["__scopeId","data-v-877413cb"]]);export{m as default};

@@ -108,6 +108,13 @@ import DemoSection from "../components/DemoSection.astro"
 
   const resizableWindows = document.querySelectorAll("[data-resizable-window]")
 
+  const numberFormatter = Intl.NumberFormat("en", {
+    maximumFractionDigits: 2,
+  })
+  const dimensionText = (width: number, height: number) => {
+    return `${numberFormatter.format(width)} x ${numberFormatter.format(height)}`
+  }
+
   const hideDimensionContainer = debounce(
     (element: Element) => element.classList.add("invisible"),
     1500,
@@ -129,7 +136,7 @@ import DemoSection from "../components/DemoSection.astro"
 
     if (dimensionContainer) {
       dimensionContainer.classList.remove("invisible")
-      dimensionContainer.textContent = `${width} x ${height}`
+      dimensionContainer.textContent = dimensionText(width, height)
       hideDimensionContainer(dimensionContainer)
     }
   })

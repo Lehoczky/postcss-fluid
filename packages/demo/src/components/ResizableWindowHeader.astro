@@ -1,9 +1,22 @@
 ---
 import IconHamburger from "./IconHamburger.astro"
 import IconLockClosed from "./IconLockClosed.astro"
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "../utils/cn"
+
+export interface Props extends HTMLAttributes<"div"> {}
+
+const { class: className, ...attrs } = Astro.props
 ---
 
-<div class="flex items-center justify-between gap-4 bg-base-400 px-6 py-4">
+<div
+  class={cn(
+    "flex items-center justify-between gap-4 bg-base-400 px-6 py-4",
+    className,
+  )}
+  {...attrs}
+>
   <div class="flex gap-2">
     <div class="h-3.5 w-3.5 rounded-full bg-red-400"></div>
     <div class="h-3.5 w-3.5 rounded-full bg-yellow-400"></div>

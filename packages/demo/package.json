@@ -14,6 +14,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.13.1",
     "clsx": "^2.1.1",
+    "perfect-debounce": "^1.0.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4"

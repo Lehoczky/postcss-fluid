@@ -1,0 +1,19 @@
+---
+import "../../assets/positioned-box.example.css"
+import ExampleLayout from "../../layouts/ExampleLayout.astro"
+---
+
+<ExampleLayout>
+  <section class="relative">
+    <div></div>
+  </section>
+</ExampleLayout>
+
+<style scoped>
+  div {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    @apply bg-box;
+  }
+</style>

@@ -1,0 +1,9 @@
+div {
+  padding: fluid(4px, 40px, 480px, 720px);
+}
+
+/* Compiled output:
+div {
+  padding: clamp(4px, -68px + 15vw, 40px);
+}
+*/

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Demo site for the @lehoczky/postcss-fluid plugin."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <base href={import.meta.env.BASE_URL} />
+    <title>PostCSS Fluid Demo</title>
+  </head>
+  <body class="bg-base-800 font-sans text-base-300">
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    h1 {
+      @apply text-4xl sm:text-5xl;
+    }
+
+    h2 {
+      @apply mb-6 text-2xl sm:text-3xl;
+    }
+  }
+
+  :root {
+    color-scheme: dark;
+  }
+
+  .astro-code {
+    @apply p-4;
+  }
+</style>

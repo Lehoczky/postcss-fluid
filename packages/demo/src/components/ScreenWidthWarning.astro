@@ -1,0 +1,29 @@
+---
+import IconWarning from "./IconWarning.astro"
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "../utils/cn"
+
+export interface Props extends HTMLAttributes<"div"> {}
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<div
+  class={cn(
+    "relative rounded-xl border border-rose-900 bg-rose-950 py-3 pl-3 pr-5",
+    className,
+  )}
+  {...attrs}
+>
+  <div
+    class="absolute right-0 top-0 -translate-y-1/3 translate-x-1/3 rounded-full bg-rose-900 p-1"
+  >
+    <IconWarning />
+  </div>
+  <span
+    >This page is best viewed on devices that has a screen wider than
+    <span class="underline underline-offset-2">780px</span>. On smaller devices
+    you might not be able to resize the examples.</span
+  >
+</div>

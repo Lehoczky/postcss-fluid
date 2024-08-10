@@ -6,5 +6,15 @@
   },
   "css.validate": false,
   "stylelint.validate": ["css", "vue"],
-  "cSpell.words": ["octo", "octocat", "postcss", "Shiki", "shikiji", "vueuse"]
+  "cSpell.words": [
+    "astro",
+    "astrojs",
+    "clsx",
+    "octo",
+    "octocat",
+    "postcss",
+    "Shiki",
+    "shikiji",
+    "vueuse"
+  ]
 }

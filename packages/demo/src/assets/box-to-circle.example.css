@@ -1,0 +1,9 @@
+div {
+  border-radius: fluid(0, 50px, 480px, 720px);
+}
+
+/* Compiled output:
+div {
+  border-radius: clamp(0px, -100px + 20.8333vw, 50px);
+}
+*/

@@ -1,0 +1,31 @@
+---
+import "../../assets/fluid-grid-gap.example.css"
+import ExampleLayout from "../../layouts/ExampleLayout.astro"
+---
+
+<ExampleLayout>
+  <section class="flex">
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+</ExampleLayout>
+
+<style scoped>
+  div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: fluid(0, 30px, 480px, 720px);
+  }
+
+  div > * {
+    width: 60px;
+    height: 60px;
+    @apply bg-box;
+  }
+</style>

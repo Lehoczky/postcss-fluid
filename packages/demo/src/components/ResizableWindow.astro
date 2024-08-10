@@ -1,0 +1,77 @@
+---
+import ResizableWindowDimensions from "./ResizableWindowDimensions.astro"
+import ResizableWindowHeader from "./ResizableWindowHeader.astro"
+import type { HTMLAttributes } from "astro/types"
+
+import { cn } from "../utils/cn"
+
+export interface Props extends HTMLAttributes<"div"> {}
+
+const { class: className, ...attrs } = Astro.props
+---
+
+<resizable-window
+  class={cn(
+    "flex min-w-[10rem] max-w-[896px] resize-x flex-col overflow-x-auto rounded-xl @container sm:overflow-hidden",
+    className,
+  )}
+  {...attrs}
+>
+  <ResizableWindowHeader />
+
+  <div data-frame class="relative grid place-items-stretch bg-base-600">
+    <slot />
+
+    <ResizableWindowDimensions class="absolute right-0 top-px" />
+  </div>
+</resizable-window>
+
+<script>
+  import { debounce } from "perfect-debounce"
+
+  class ResizableWindow extends HTMLElement {
+    constructor() {
+      super()
+
+      const frame = this.querySelector("[data-frame]")
+      const dimensionContainer = this.querySelector("[data-dimensions]")
+
+      const numberFormatter = Intl.NumberFormat("en", {
+        maximumFractionDigits: 2,
+      })
+      const dimensionText = (width: number, height: number) => {
+        return `${numberFormatter.format(width)} x ${numberFormatter.format(height)}`
+      }
+
+      const hideDimensionContainer = debounce(
+        (element: Element) => element.classList.add("invisible"),
+        1500,
+      )
+
+      // We want to skip the first resize callback, because it fires
+      // immediately on page load thanks to the iframe content being loaded.
+      let isFirstUpdate = true
+
+      const resizeObserver = new ResizeObserver((entries) => {
+        if (isFirstUpdate) {
+          isFirstUpdate = false
+          return
+        }
+
+        const { width, height } = entries[0].contentRect
+
+        if (dimensionContainer) {
+          dimensionContainer.classList.remove("invisible")
+          dimensionContainer.textContent = dimensionText(width, height)
+          hideDimensionContainer(dimensionContainer)
+        }
+      })
+
+      if (frame) {
+        resizeObserver.observe(frame)
+      }
+    }
+  }
+
+  customElements.define("resizable-window", ResizableWindow)
+</script>

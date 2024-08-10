@@ -1,0 +1,13 @@
+div {
+  font-size: fluid(16px, 28px, 480px, 720px);
+  line-height: fluid(26px, 38px, 480px, 720px);
+  letter-spacing: fluid(0, 0.6px, 480px, 720px);
+}
+
+/* Compiled output:
+div {
+  font-size: clamp(16px, -8px + 5vw, 28px);
+  line-height: clamp(26px, 2px + 5vw, 38px);
+  letter-spacing: clamp(0px, -1.2px + 0.25vw, 0.6px);
+}
+*/

@@ -6,6 +6,9 @@
   },
   "css.validate": false,
   "stylelint.validate": ["css", "vue"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
   "cSpell.words": [
     "astro",
     "astrojs",

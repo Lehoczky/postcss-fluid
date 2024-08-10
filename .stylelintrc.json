@@ -16,6 +16,7 @@
     "at-rule-empty-line-before": [
       "always",
       { "ignoreAtRules": ["tailwind", "apply", "layer"] }
-    ]
+    ],
+    "length-zero-no-unit": null
   }
 }

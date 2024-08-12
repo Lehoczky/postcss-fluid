@@ -14,11 +14,11 @@
     "@astrojs/tailwind": "^5.1.0",
     "@lehoczky/postcss-fluid": "workspace:*",
     "@types/node": "catalog:",
-    "astro": "^4.13.1",
+    "astro": "^4.13.3",
     "clsx": "^2.1.1",
     "perfect-debounce": "^1.0.0",
-    "tailwind-merge": "^2.3.0",
-    "tailwindcss": "^3.4.7",
+    "tailwind-merge": "^2.5.1",
+    "tailwindcss": "^3.4.9",
     "typescript": "catalog:"
   },
   "devDependencies": {

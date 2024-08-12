@@ -10,7 +10,7 @@
   "devDependencies": {
     "@lehoczky/eslint-config-vue": "^1.2.6",
     "@lehoczky/prettier-config": "^1.1.7",
-    "@types/node": "^20.14.14",
+    "@types/node": "catalog:",
     "eslint": "^8.57.0",
     "eslint-define-config": "^2.1.0",
     "nx": "19.5.6",
@@ -22,7 +22,7 @@
     "stylelint": "^16.8.1",
     "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard": "^36.0.1",
-    "typescript": "~5.4.5"
+    "typescript": "catalog:"
   },
   "nx": {},
   "packageManager": "pnpm@9.7.0"

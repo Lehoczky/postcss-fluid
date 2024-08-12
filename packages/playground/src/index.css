@@ -1,0 +1,4 @@
+div {
+  font-size: clamp(16px, 5vw, 28px);
+  line-height: clamp(26px, 5vw, 38px);
+}

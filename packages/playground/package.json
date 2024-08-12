@@ -1,0 +1,16 @@
+{
+  "name": "playground",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "postcss src/ --dir dist",
+    "start:watch": "postcss src/ --dir dist --watch"
+  },
+  "devDependencies": {
+    "@lehoczky/postcss-fluid": "workspace:*",
+    "@types/node": "catalog:",
+    "postcss": "^8.4.41",
+    "postcss-cli": "^11.0.0",
+    "typescript": "catalog:"
+  }
+}

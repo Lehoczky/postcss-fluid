@@ -44,12 +44,12 @@ function getParsedArguments(
   if (args.length !== 4) {
     throw new Error(`Function expects 4 arguments, but got: ${args.length}`)
   }
-  args.forEach((argument, i) => {
+  for (const [i, argument] of args.entries()) {
     if (isBoolean(argument)) {
       const originalArg = rawArgs[i]
       throw new Error(`Argument "${originalArg}"'s quantity cannot be parsed`)
     }
-  })
+  }
   return args as Dimension[]
 }
 

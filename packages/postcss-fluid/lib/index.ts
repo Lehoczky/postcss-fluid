@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-throw-literal */
 import type { Plugin } from "postcss"
 import valueParser from "postcss-value-parser"
 

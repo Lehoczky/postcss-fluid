@@ -7,7 +7,9 @@
     "clean-dist": "node -e \"fs.rmSync('dist', { force: true, recursive: true })\"",
     "build": "npm run clean-dist && tsc -p tsconfig.build.json",
     "test": "vitest run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint --max-warnings=0",
+    "lint:fix": "eslint --max-warnings=0 --fix"
   },
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -26,11 +28,14 @@
     "postcss-value-parser": "^4.2.0"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
-    "@vitest/coverage-v8": "^2.1.4",
-    "postcss": "^8.4.47",
-    "typescript": "catalog:",
-    "vitest": "^2.1.4"
+    "@lehoczky/eslint-config-typescript": "^2.0.4",
+    "@lehoczky/eslint-config-vitest": "^1.0.5",
+    "@types/node": "^20.17.9",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.16.0",
+    "postcss": "^8.4.49",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
   },
   "keywords": [
     "postcss",

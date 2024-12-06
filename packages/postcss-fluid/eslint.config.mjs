@@ -1,11 +1,10 @@
 // @ts-check
+import { configLehoczkyTypescript } from "@lehoczky/eslint-config-typescript"
 import { configLehoczkyVitest } from "@lehoczky/eslint-config-vitest"
-import { configLehoczkyVue } from "@lehoczky/eslint-config-vue"
-import eslintPluginAstro from "eslint-plugin-astro"
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
-  ...configLehoczkyVue({
+  ...configLehoczkyTypescript({
     parserOptionsForTypeChecking: {
       projectService: true,
       tsconfigRootDir: import.meta.dirname,
@@ -27,5 +26,4 @@ export default [
       ],
     },
   },
-  ...eslintPluginAstro.configs["flat/recommended"],
 ]

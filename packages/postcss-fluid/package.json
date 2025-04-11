@@ -31,11 +31,11 @@
     "@lehoczky/eslint-config-typescript": "^2.0.7",
     "@lehoczky/eslint-config-vitest": "^1.0.8",
     "@types/node": "^22.14.0",
-    "@vitest/coverage-v8": "^2.1.9",
+    "@vitest/coverage-v8": "^3.1.1",
     "eslint": "^9.24.0",
     "postcss": "^8.5.3",
     "typescript": "^5.8.3",
-    "vitest": "^2.1.9"
+    "vitest": "^3.1.1"
   },
   "keywords": [
     "postcss",

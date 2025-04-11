@@ -13,18 +13,18 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/tailwind": "^5.1.3",
-    "@lehoczky/eslint-config-vue": "^2.0.4",
+    "@astrojs/tailwind": "^5.1.5",
+    "@lehoczky/eslint-config-vue": "^2.0.7",
     "@lehoczky/postcss-fluid": "workspace:*",
-    "@types/node": "^20.17.9",
-    "astro": "^4.16.17",
+    "@types/node": "^20.17.30",
+    "astro": "^4.16.18",
     "clsx": "^2.1.1",
-    "eslint": "^9.16.0",
+    "eslint": "^9.24.0",
     "eslint-plugin-astro": "^1.3.1",
     "perfect-debounce": "^1.0.0",
-    "tailwind-merge": "^2.5.5",
-    "tailwindcss": "^3.4.16",
-    "typescript": "^5.7.2"
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
   },
   "devDependencies": {
     "@tailwindcss/container-queries": "^0.1.1"

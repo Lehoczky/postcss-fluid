@@ -3,12 +3,12 @@
   "private": true,
   "scripts": {},
   "devDependencies": {
-    "@lehoczky/prettier-config": "^2.0.1",
+    "@lehoczky/prettier-config": "^2.0.2",
     "nx": "20.2.0",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "typescript": "^5.7.2"
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@9.15.0"
 }

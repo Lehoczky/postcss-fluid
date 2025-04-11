@@ -8,9 +8,9 @@
   },
   "devDependencies": {
     "@lehoczky/postcss-fluid": "workspace:*",
-    "@types/node": "^20.17.9",
-    "postcss": "^8.4.49",
-    "postcss-cli": "^11.0.0",
-    "typescript": "^5.7.2"
+    "@types/node": "^22.14.0",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "typescript": "^5.8.3"
   }
 }

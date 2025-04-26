@@ -1,8 +1,7 @@
 # postcss-fluid
 
 [![NPM version](https://img.shields.io/npm/v/@lehoczky/postcss-fluid.svg)](https://www.npmjs.com/package/@lehoczky/postcss-fluid)
-![lint status](https://github.com/lehoczky/postcss-fluid/workflows/Lint/badge.svg)
-![test status](https://github.com/lehoczky/postcss-fluid/workflows/Test/badge.svg)
+[![CI](https://github.com/Lehoczky/postcss-fluid/actions/workflows/ci.yml/badge.svg)](https://github.com/Lehoczky/postcss-fluid/actions/workflows/ci.yml)
 ![formatted with prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
 [PostCSS](https://github.com/postcss/postcss) plugin that makes it easier to work with fluid, responsive values.

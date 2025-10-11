@@ -1,8 +1,19 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": [
+      "default",
+      "!{projectRoot}/eslint.config.mjs",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json"
+    ],
+    "sharedGlobals": []
+  },
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
       "outputs": ["{projectRoot}/dist"],
       "cache": true
     },
@@ -17,6 +28,5 @@
       "cache": true
     }
   },
-  "defaultBase": "master",
-  "nxCloudId": "6648be433be17c492a2e300d"
+  "defaultBase": "master"
 }

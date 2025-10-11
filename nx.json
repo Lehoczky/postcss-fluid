@@ -23,6 +23,10 @@
     "lint": {
       "cache": true
     },
+    "publint": {
+      "cache": true,
+      "dependsOn": ["build"]
+    },
     "test": {
       "dependsOn": ["^test"],
       "cache": true

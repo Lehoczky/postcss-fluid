@@ -1,5 +1,5 @@
 ---
-import "../../assets/positioned-box.example.css"
+import "../../styles/positioned-box.example.css"
 
 import ExampleLayout from "../../layouts/ExampleLayout.astro"
 ---
@@ -11,6 +11,8 @@ import ExampleLayout from "../../layouts/ExampleLayout.astro"
 </ExampleLayout>
 
 <style scoped>
+  @reference "../../styles/global.css";
+
   div {
     position: absolute;
     width: 40px;

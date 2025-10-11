@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-base-300: #cbcac8;
+  --color-base-400: #3b404d;
+  --color-base-500: #2e323b;
+  --color-base-600: #282c34;
+  --color-base-700: #21252b;
+  --color-base-800: #1b1f23;
+  --color-box: #064e3b;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl sm:text-5xl;
+  }
+
+  h2 {
+    @apply mb-6 text-2xl sm:text-3xl;
+  }
+}
+
+.astro-code {
+  @apply p-4;
+}
+
+:root {
+  color-scheme: dark;
+}

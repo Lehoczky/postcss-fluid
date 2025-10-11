@@ -10,10 +10,7 @@ const { class: className, ...attrs } = Astro.props
 
 <div
   data-dimensions=""
-  class={cn(
-    "bg-white bg-opacity-60 p-1 text-xs leading-none text-base-700",
-    className,
-  )}
+  class={cn("text-base-700 bg-white/60 p-1 text-xs leading-none", className)}
   {...attrs}
 >
 </div>

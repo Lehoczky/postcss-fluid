@@ -1,5 +1,5 @@
 ---
-import "../../assets/fluid-grid-gap.example.css"
+import "../../styles/fluid-grid-gap.example.css"
 
 import ExampleLayout from "../../layouts/ExampleLayout.astro"
 ---
@@ -18,6 +18,8 @@ import ExampleLayout from "../../layouts/ExampleLayout.astro"
 </ExampleLayout>
 
 <style scoped>
+  @reference "../../styles/global.css";
+
   div {
     display: grid;
     grid-template-columns: 1fr 1fr;

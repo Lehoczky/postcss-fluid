@@ -1,5 +1,5 @@
 ---
-import "../../assets/growing-square.example.css"
+import "../../styles/growing-square.example.css"
 
 import ExampleLayout from "../../layouts/ExampleLayout.astro"
 ---
@@ -9,6 +9,8 @@ import ExampleLayout from "../../layouts/ExampleLayout.astro"
 </ExampleLayout>
 
 <style>
+  @reference "../../styles/global.css";
+
   div {
     @apply bg-box;
   }

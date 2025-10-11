@@ -1,3 +1,7 @@
+---
+import "../styles/global.css"
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,27 +24,3 @@
     <slot />
   </body>
 </html>
-
-<style is:global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-
-  @layer base {
-    h1 {
-      @apply text-4xl sm:text-5xl;
-    }
-
-    h2 {
-      @apply mb-6 text-2xl sm:text-3xl;
-    }
-  }
-
-  :root {
-    color-scheme: dark;
-  }
-
-  .astro-code {
-    @apply p-4;
-  }
-</style>

@@ -1,12 +1,12 @@
 ---
-import boxToCircleExample from "../assets/box-to-circle.example.css?raw"
-import fluidBorderExample from "../assets/fluid-border.example.css?raw"
-import fluidGridGapExample from "../assets/fluid-grid-gap.example.css?raw"
-import growingSquareExample from "../assets/growing-square.example.css?raw"
-import paddedBoxExample from "../assets/padded-box.example.css?raw"
-import positionedBoxExample from "../assets/positioned-box.example.css?raw"
-import shrinkingSquareExample from "../assets/shrinking-square.example.css?raw"
-import typographyExample from "../assets/typography.example.css?raw"
+import boxToCircleExample from "../styles/box-to-circle.example.css?raw"
+import fluidBorderExample from "../styles/fluid-border.example.css?raw"
+import fluidGridGapExample from "../styles/fluid-grid-gap.example.css?raw"
+import growingSquareExample from "../styles/growing-square.example.css?raw"
+import paddedBoxExample from "../styles/padded-box.example.css?raw"
+import positionedBoxExample from "../styles/positioned-box.example.css?raw"
+import shrinkingSquareExample from "../styles/shrinking-square.example.css?raw"
+import typographyExample from "../styles/typography.example.css?raw"
 import DemoSection from "../components/DemoSection.astro"
 import GitHubBadge from "../components/GitHubBadge.astro"
 import GitHubLink from "../components/GitHubLink.astro"
@@ -31,14 +31,13 @@ import MainLayout from "../layouts/MainLayout.astro"
 
       <DemoSection code={typographyExample}>
         <Fragment slot={"heading"}>Fluid Typography</Fragment>
-        <iframe class="h-[23.125rem] max-w-full" src="./examples/typography"
-        ></iframe>
+        <iframe class="h-92.5 max-w-full" src="./examples/typography"></iframe>
       </DemoSection>
 
       <DemoSection code={growingSquareExample}>
         <Fragment slot={"heading"}>Width and Height</Fragment>
         <iframe
-          class="h-[18rem] max-w-full"
+          class="h-72 max-w-full"
           src="./examples/growing-square"
           loading="lazy"></iframe>
       </DemoSection>
@@ -46,7 +45,7 @@ import MainLayout from "../layouts/MainLayout.astro"
       <DemoSection code={paddedBoxExample}>
         <Fragment slot={"heading"}>Padding</Fragment>
         <iframe
-          class="h-[18rem] max-w-full"
+          class="h-72 max-w-full"
           src="./examples/padded-box"
           loading="lazy"></iframe>
       </DemoSection>
@@ -54,7 +53,7 @@ import MainLayout from "../layouts/MainLayout.astro"
       <DemoSection code={positionedBoxExample}>
         <Fragment slot={"heading"}>Position</Fragment>
         <iframe
-          class="h-[14rem] max-w-full"
+          class="h-56 max-w-full"
           src="./examples/positioned-box"
           loading="lazy"></iframe>
       </DemoSection>
@@ -62,7 +61,7 @@ import MainLayout from "../layouts/MainLayout.astro"
       <DemoSection code={shrinkingSquareExample}>
         <Fragment slot={"heading"}>Larger Value on Mobile</Fragment>
         <iframe
-          class="h-[18rem] max-w-full"
+          class="h-72 max-w-full"
           src="./examples/shrinking-square"
           loading="lazy"></iframe>
       </DemoSection>
@@ -70,7 +69,7 @@ import MainLayout from "../layouts/MainLayout.astro"
       <DemoSection code={boxToCircleExample}>
         <Fragment slot={"heading"}>Border Radius</Fragment>
         <iframe
-          class="h-[14rem] max-w-full"
+          class="h-56 max-w-full"
           src="./examples/box-to-circle"
           loading="lazy"></iframe>
       </DemoSection>
@@ -78,7 +77,7 @@ import MainLayout from "../layouts/MainLayout.astro"
       <DemoSection code={fluidGridGapExample}>
         <Fragment slot={"heading"}>Gap</Fragment>
         <iframe
-          class="h-[20rem] max-w-full"
+          class="h-80 max-w-full"
           src="./examples/fluid-grid-gap"
           loading="lazy"></iframe>
       </DemoSection>
@@ -86,7 +85,7 @@ import MainLayout from "../layouts/MainLayout.astro"
       <DemoSection code={fluidBorderExample}>
         <Fragment slot={"heading"}>Border</Fragment>
         <iframe
-          class="h-[14rem] max-w-full"
+          class="h-56 max-w-full"
           src="./examples/fluid-border"
           loading="lazy"></iframe>
       </DemoSection>
@@ -94,7 +93,7 @@ import MainLayout from "../layouts/MainLayout.astro"
       <GitHubBadge />
     </main>
 
-    <div class="flex justify-center bg-base-700 p-3 md:hidden">
+    <div class="bg-base-700 flex justify-center p-3 md:hidden">
       <GitHubLink>
         <IconGitHub />
       </GitHubLink>

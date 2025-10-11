@@ -6,7 +6,7 @@ import config from "@lehoczky/prettier-config"
 export default {
   ...config,
   plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
-  tailwindConfig: "./packages/demo/tailwind.config.ts",
+  tailwindConfig: "./packages/demo/src/styles/global.css",
   tailwindFunctions: ["cn"],
   overrides: [
     {

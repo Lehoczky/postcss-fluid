@@ -6,6 +6,7 @@
   "tailwindCSS.experimental.classRegex": [
     ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
+  "css.customData": [".vscode/tailwind.json"],
   "cSpell.words": [
     "astro",
     "astrojs",

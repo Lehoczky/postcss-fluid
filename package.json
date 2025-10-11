@@ -4,11 +4,11 @@
   "scripts": {},
   "devDependencies": {
     "@lehoczky/prettier-config": "^2.0.2",
-    "nx": "20.7.2",
-    "prettier": "^3.5.3",
+    "nx": "21.6.4",
+    "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "typescript": "^5.8.3"
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@9.15.0"
 }

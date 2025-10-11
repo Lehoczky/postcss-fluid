@@ -27,6 +27,9 @@
       "cache": true,
       "dependsOn": ["build"]
     },
+    "preview": {
+      "dependsOn": ["build"]
+    },
     "test": {
       "dependsOn": ["^test"],
       "cache": true
